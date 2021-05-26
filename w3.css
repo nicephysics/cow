@@ -1,19 +1,19 @@
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
- html{
+html{
     box-sizing:border-box
 }
 *,*:before,*:after{
     box-sizing:inherit
 }
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
- html{
+html{
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
 body{
     margin:0
 }
- article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }
 summary{
@@ -25,93 +25,93 @@ summary{
 progress{
     vertical-align:baseline
 }
- audio:not([controls]){
+audio:not([controls]){
     display:none;
     height:0
 }
 [hidden],template{
     display:none
 }
- a{
+a {
     background-color:transparent
 }
-a:active,a:hover{
+a:active, a:hover {
     outline-width:0
 }
- abbr[title]{
+abbr[title] {
     border-bottom:none;
     text-decoration:underline;
     text-decoration:underline dotted
 }
- b,strong{
+b, strong {
     font-weight:bolder
 }
-dfn{
+dfn {
     font-style:italic
 }
-mark{
+mark {
     background:#ff0;
     color:#000
 }
- small{
+small {
     font-size:80%
 }
-sub,sup{
+sub, sup {
     font-size:75%;
     line-height:0;
     position:relative;
     vertical-align:baseline
 }
- sub{
+sub {
     bottom:-0.25em
 }
-sup{
+sup {
     top:-0.5em
 }
-figure{
+figure {
     margin:1em 40px
 }
-img{
+img {
     border-style:none
 }
- code,kbd,pre,samp{
+code, kbd, pre, samp {
     font-family:monospace,monospace;
     font-size:1em
 }
-hr{
+hr {
     box-sizing:content-box;
     height:0;
     overflow:visible
 }
- button,input,select,textarea,optgroup{
+button,input,select,textarea,optgroup {
     font:inherit;
     margin:0
 }
-optgroup{
+optgroup {
     font-weight:bold
 }
- button,input{
+button,input {
     overflow:visible
 }
-button,select{
+button,select {
     text-transform:none
 }
- button,[type=button],[type=reset],[type=submit]{
+button,[type=button],[type=reset],[type=submit] {
     -webkit-appearance:button
 }
- button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{
     border-style:none;
     padding:0
 }
- button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{
     outline:1px dotted ButtonText
 }
- fieldset{
+fieldset{
     border:1px solid #c0c0c0;
     margin:0 2px;
     padding:.35em .625em .75em
 }
- legend{
+legend{
     color:inherit;
     display:table;
     max-width:100%;
@@ -121,107 +121,110 @@ button,select{
 textarea{
     overflow:auto
 }
- [type=checkbox],[type=radio]{
+[type=checkbox],[type=radio]{
     padding:0
 }
- [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
     height:auto
 }
- [type=search]{
+[type=search]{
     -webkit-appearance:textfield;
     outline-offset:-2px
 }
- [type=search]::-webkit-search-decoration{
+[type=search]::-webkit-search-decoration{
     -webkit-appearance:none
 }
- ::-webkit-file-upload-button{
+::-webkit-file-upload-button{
     -webkit-appearance:button;
     font:inherit
 }
 /* End extract */
- html,body{
-    font-family:Verdana,sans-serif;
-    font-size:15px;
-    line-height:1.5
+html,body{
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
 }
-html{
+html {
     overflow-x:hidden
 }
- h1{
+h1 {
     font-size:36px
 }
-h2{
+h2 {
     font-size:30px
 }
-h3{
+h3 {
     font-size:24px
 }
-h4{
+h4 {
     font-size:20px
 }
-h5{
+h5 {
     font-size:18px
 }
-h6{
+h6 {
     font-size:16px
 }
- .w3-serif{
+.font-serif {
     font-family:serif
 }
-.w3-sans-serif{
+.font-sans-serif{
     font-family:sans-serif
 }
-.w3-cursive{
+.font-cursive{
     font-family:cursive
 }
-.w3-monospace{
+.font-monospace{
     font-family:monospace
 }
- h1,h2,h3,h4,h5,h6{
-    font-family:"Segoe UI",Arial,sans-serif;
-    font-weight:400;
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
     margin:10px 0
 }
-.w3-wide{
+.wide-letters {
     letter-spacing:4px
 }
- hr{
+.wider-letters {
+    letter-spacing:8px
+}
+hr{
     border:0;
     border-top:1px solid #eee;
     margin:20px 0
 }
- .w3-image{
+.image {
     max-width:100%;
     height:auto
 }
-img{
+img {
     vertical-align:middle
 }
-a{
+a {
     color:inherit
 }
- .w3-table,.w3-table-all{
+.w3-table, .w3-table-all {
     border-collapse:collapse;
     border-spacing:0;
     width:100%;
     display:table
 }
-.w3-table-all{
+.w3-table-all {
     border:1px solid #ccc
 }
- .w3-bordered tr,.w3-table-all tr{
+.w3-bordered tr, .w3-table-all tr {
     border-bottom:1px solid #ddd
 }
-.w3-striped tbody tr:nth-child(even){
+.w3-striped tbody tr:nth-child(even) {
     background-color:#f1f1f1
 }
- .w3-table-all tr:nth-child(odd){
+.w3-table-all tr:nth-child(odd) {
     background-color:#fff
 }
-.w3-table-all tr:nth-child(even){
+.w3-table-all tr:nth-child(even) {
     background-color:#f1f1f1
 }
- .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{
     background-color:#ccc
 }
 .w3-centered tr th,.w3-centered tr td{
@@ -233,10 +236,10 @@ a{
     text-align:left;
     vertical-align:top
 }
- .w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{
+ .w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child {
     padding-left:16px
 }
- .w3-btn,.w3-button{
+.btn {
     border:none;
     display:inline-block;
     padding:8px 16px;
@@ -249,10 +252,10 @@ a{
     cursor:pointer;
     white-space:nowrap
 }
- .w3-btn:hover{
+.btn:hover {
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
- .w3-btn,.w3-button{
+.btn {
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     -khtml-user-select:none;
@@ -260,17 +263,17 @@ a{
     -ms-user-select:none;
     user-select:none
 }
- .w3-disabled,.w3-btn:disabled,.w3-button:disabled{
+.disabled, .btn:disabled {
     cursor:not-allowed;
     opacity:0.3
 }
-.w3-disabled *,:disabled *{
+.disabled *, :disabled * {
     pointer-events:none
 }
- .w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{
+.btn .disabled:hover, .btn:disabled:hover {
     box-shadow:none
 }
- .w3-badge,.w3-tag{
+ .w3-badge, .w3-tag {
     background-color:#000;
     color:#fff;
     display:inline-block;
@@ -278,22 +281,22 @@ a{
     padding-right:8px;
     text-align:center
 }
-.w3-badge{
+.w3-badge {
     border-radius:50%
 }
- .w3-ul{
+.w3-ul {
     list-style-type:none;
     padding:0;
     margin:0
 }
-.w3-ul li{
+.w3-ul li {
     padding:8px 16px;
     border-bottom:1px solid #ddd
 }
-.w3-ul li:last-child{
+.w3-ul li:last-child {
     border-bottom:none
 }
- .w3-tooltip,.w3-display-container{
+.w3-tooltip,.w3-display-container {
     position:relative
 }
 .w3-tooltip .w3-text{
@@ -305,39 +308,39 @@ a{
  .w3-ripple:active{
     opacity:0.5
 }
-.w3-ripple{
+.w3-ripple {
     transition:opacity 0s
 }
- .w3-input{
+.w3-input{
     padding:8px;
     display:block;
     border:none;
     border-bottom:1px solid #ccc;
     width:100%
 }
- .w3-select{
+.w3-select{
     padding:9px 0;
     width:100%;
     border:none;
     border-bottom:1px solid #ccc
 }
- .w3-dropdown-click,.w3-dropdown-hover{
+.w3-dropdown-click,.w3-dropdown-hover {
     position:relative;
     display:inline-block;
     cursor:pointer
 }
- .w3-dropdown-hover:hover .w3-dropdown-content{
+.w3-dropdown-hover:hover .w3-dropdown-content {
     display:block
 }
- .w3-dropdown-hover:first-child,.w3-dropdown-click:hover{
+ .w3-dropdown-hover:first-child,.w3-dropdown-click:hover {
     background-color:#ccc;
     color:#000
 }
- .w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{
+ .w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child {
     background-color:#ccc;
     color:#000
 }
- .w3-dropdown-content{
+.w3-dropdown-content {
     cursor:auto;
     color:#000;
     background-color:#fff;
@@ -348,13 +351,13 @@ a{
     padding:0;
     z-index:1
 }
- .w3-check,.w3-radio{
+.w3-check,.w3-radio {
     width:24px;
     height:24px;
     position:relative;
     top:6px
 }
- .w3-sidebar{
+.w3-sidebar {
     height:100%;
     width:200px;
     background-color:#fff;
@@ -362,21 +365,21 @@ a{
     z-index:1;
     overflow:auto
 }
- .w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{
+.w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click {
     width:100%
 }
- .w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content{
+.w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content {
     min-width:100%
 }
- .w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{
+.w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button {
     width:100%;
     text-align:left;
     padding:8px 16px
 }
- .w3-main,#main{
+.w3-main,#main {
     transition:margin-left .4s
 }
- .w3-modal{
+.w3-modal {
     z-index:3;
     display:none;
     padding-top:100px;
@@ -389,7 +392,7 @@ a{
     background-color:rgb(0,0,0);
     background-color:rgba(0,0,0,0.4)
 }
- .w3-modal-content{
+.w3-modal-content {
     margin:auto;
     background-color:#fff;
     position:relative;
@@ -630,7 +633,7 @@ a{
     .w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{
         text-align:center
     }
-     .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{
+     .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .btn,.w3-dropdown-click.w3-mobile .w3-button{
         width:100%
     }
 }
