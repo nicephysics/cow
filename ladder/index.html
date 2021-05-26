@@ -27,7 +27,7 @@
     <!-- image -->
     <div class="w3-row-padding padding-64 w3-container w3-center">
       <div class="w3-content">
-        <img src="https://nicephysics.github.io/moments/assets/cave_ladder.png" alt="a ladder in a cave" width="864" height="486" class="transparent">
+        <img src="https://nicephysics.github.io/moments/assets/cave_ladder.png" alt="a ladder in a cave" width="338" height="450" class="transparent">
         </img>
       </div>
     </div>
@@ -63,14 +63,15 @@
         <p class="w3-twothird text-center vertical-center w3-text-grey" style="text-align:center!important">
           <i>
             This uniform ladder, <br>
-            12 meters long and 100 kg, <br>
-            is leaning on the wall with a normal force of 400N, <br>
-            60° from the ground.
+            12 metres long and 100 kg, <br>
+            is leaning on the smooth vertical wall, <br>
+            60° from the ground. <br> <br>
           </i>
+          The ladder can withstand only a maximum friction force of <b>1000 N</b> before slipping on the ground.
         </p>
         <!-- image ladder -->
         <div class="w3-third w3-center">
-          <img src="https://nicephysics.github.io/moments/assets/ladder.png" alt="number pad with numbers from 0 to 9" width="164" height="204" class="transparent">
+          <img src="https://nicephysics.github.io/moments/assets/ladder.png" alt="a ladder" width="256" height="256" class="transparent">
           </img>
         </div>
       </div>
@@ -82,7 +83,7 @@
       <div class="w3-content">
         <h5 class="padding-32">
           Ah, you think.
-          The ladder might fall down if you climb on it to a certain height, but you just don’t know what height.
+          The ladder might slip on the ground if you climb on it to a certain height, but you just don’t know what height.
           These values should do it, to calculate the maximum height you can climb, if you assume that the wall is smooth.
           You know that you weigh 40 kg.
         </h5>
@@ -126,7 +127,7 @@
     <script>
       var answer = document.getElementById("answer")
       function check() {
-        if (answer.value === "5.78 m" || answer.value === "5.78m" || answer.value === "578 cm" || answer.value === "578cm" ) {
+        if (answer.value === "4.15 m" || answer.value === "4.15m" || answer.value === "415 cm" || answer.value === "415cm" ) {
           window.location.href = "https://nicephysics.github.io/moments/cave";
         } else {
           // wrong!
