@@ -250,7 +250,8 @@ a {
     background-color:inherit;
     text-align:center;
     cursor:pointer;
-    white-space:nowrap
+    white-space:nowrap;
+    transition:0.3s
 }
 .btn:hover, .w3-button:hover {
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
