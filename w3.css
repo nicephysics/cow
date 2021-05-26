@@ -1,35 +1,35 @@
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
-html{
+html {
     box-sizing:border-box
 }
-*,*:before,*:after{
+*,*:before,*:after {
     box-sizing:inherit
 }
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html{
+html {
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
-body{
+body {
     margin:0
 }
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display:block
 }
-summary{
+summary {
     display:list-item
 }
- audio,canvas,progress,video{
+audio,canvas,progress,video {
     display:inline-block
 }
-progress{
+progress {
     vertical-align:baseline
 }
-audio:not([controls]){
+audio:not([controls]) {
     display:none;
     height:0
 }
-[hidden],template{
+[hidden],template {
     display:none
 }
 a {
@@ -1072,35 +1072,35 @@ a {
 .w3-border-right{
     border-right:1px solid #ccc!important
 }
- .w3-topbar{
+.w3-topbar {
     border-top:6px solid #ccc!important
 }
-.w3-bottombar{
+.w3-bottombar {
     border-bottom:6px solid #ccc!important
 }
- .w3-leftbar{
+ .w3-leftbar {
     border-left:6px solid #ccc!important
 }
-.w3-rightbar{
+.w3-rightbar {
     border-right:6px solid #ccc!important
 }
- .w3-section, .w3-code, .code{
+.w3-section, .w3-code, .code {
     margin-top:16px!important;
     margin-bottom:16px!important
 }
- .w3-margin{
+ .w3-margin, .margin {
     margin:16px!important
 }
-.w3-margin-top{
+.w3-margin-top, .margin-top {
     margin-top:16px!important
 }
-.w3-margin-bottom{
+.w3-margin-bottom, .margin-bottom {
     margin-bottom:16px!important
 }
- .w3-margin-left{
+ .w3-margin-left, .margin-left {
     margin-left:16px!important
 }
-.w3-margin-right{
+.w3-margin-right, .margin-right {
     margin-right:16px!important
 }
 .w3-padding-none, .padding-none {
@@ -1159,20 +1159,20 @@ a {
 .w3-padding-top-16, .padding-top-16 {
     padding-top:16px!important
 }
- .w3-left{
+.w3-left, .left {
     float:left!important
 }
-.w3-right{
+.w3-right, .right {
     float:right!important
 }
- .w3-button:hover{
+ .w3-button:hover {
     color:#000!important;
     background-color:#ccc!important
 }
- .w3-transparent,.w3-hover-none:hover{
+.w3-transparent,.w3-hover-none:hover {
     background-color:transparent!important
 }
- .w3-hover-none:hover{
+.w3-hover-none:hover {
     box-shadow:none!important
 }
 /* Colors */
