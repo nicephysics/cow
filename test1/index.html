@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <title>Test 1</title>
     <meta charset="UTF-8">
@@ -12,6 +13,7 @@
     <!-- my template -->
     <link rel="stylesheet" href="../main.css">
   </head>
+  
   <body>
 
     <!-- header -->
@@ -36,7 +38,8 @@
         <h5 class="padding-32">
           A mysterious input box appears in front of your eyes. No grass?
         </h5>
-        <input type="text"></input>
+        <input id="answer" type="text"></input>
+        <button id="button" class="w3-button w3-black padding-medium w3-margin-top medium" onclick="check()"></input>
       </div>
     </div>
 
@@ -46,7 +49,20 @@
         Created by a physics teacher.
       </p>
     </footer>
+  
+    <!-- js -->
+    <script>
+      var answer = document.getElementById("answer")
+      function check() {
+        if (answer.value === "1234567890") {
+          window.location.href = "../";
+        } else {
+          window.location.href = "../404";
+        }
+      }
+    </script>
     
     <!-- end of body -->
   </body>
+
 </html>
