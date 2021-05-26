@@ -64,7 +64,7 @@
           <i>
             This uniform ladder, <br>
             12 metres long and 100 kg, <br>
-            is leaning on the vertical wall, <br>
+            is leaning on the wall, <br>
             60° from the ground. <br> <br>
           </i>
           The ladder can withstand only a maximum friction force of <b>1000 N</b> before slipping on the ground.
@@ -117,13 +117,16 @@
     </div>
 
     <!-- footer -->
-    <footer class="w3-container padding-64 w3-center w3-opacity">
-      <p>
-        Hint: Draw a diagram. Remember to include units in the answer!
-        <br>
-        <br>
-        Another hint: Remember the normal force acting on the ladder by the ground! How can you find it?
-      </p>
+    <footer id="footer" class="w3-container padding-64 w3-center w3-opacity">
+      <button id="button_hint_1" class="w3-button w3-black large vertical-center" onclick="hint1()">
+        Hint 1
+      </button>
+      <button id="button_hint_2" class="w3-button w3-black large vertical-center" onclick="hint1()">
+        Hint 2
+      </button>
+      <button id="button_hint_3" class="w3-button w3-black large vertical-center" onclick="hint1()">
+        Hint 3
+      </button>
     </footer>
 
     <!-- js -->
@@ -161,6 +164,27 @@
           }
           fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
         }
+      }
+      function hint1() {
+        var button = document.getElementById("button_hint_1")
+        var p = document.createElement("p")
+        p.classList.add("padding-16")
+        p.innerHTML = "Hint 1: Draw a diagram. Remember to include units in the answer!"
+        document.getElementById("footer").appendChild(p)
+      }
+      function hint2() {
+        var button = document.getElementById("button_hint_2")
+        var p = document.createElement("p")
+        p.classList.add("padding-16")
+        p.innerHTML = "Hint 2: Remember the normal force acting on the ladder by the ground! How can you find it?"
+        document.getElementById("footer").appendChild(p)
+      }
+      function hint3() {
+        var button = document.getElementById("button_hint_3")
+        var p = document.createElement("p")
+        p.classList.add("padding-16")
+        p.innerHTML = "Hint 3: You can find the normal force by using Fnet = 0! Note that the ladder is in equilibrium."
+        document.getElementById("footer").appendChild(p)
       }
     </script>
     
