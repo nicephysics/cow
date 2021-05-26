@@ -73,9 +73,9 @@
                 stepinc = 1,
                 maxsteps = time_elapsed * 60, // 1 second
                 timer = setInterval(function() {
-                currentcolor[0] = currentcolor[0] - stepinc * colorchange[0]
-                currentcolor[1] = currentcolor[1] - stepinc * colorchange[1]
-                currentcolor[2] = currentcolor[2] - stepinc * colorchange[2]
+                currentcolor[0] = currentcolor[0] + stepinc * colorchange[0]
+                currentcolor[1] = currentcolor[1] + stepinc * colorchange[1]
+                currentcolor[2] = currentcolor[2] + stepinc * colorchange[2]
                 element.style.backgroundColor = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
                 console.log(element.style)
                 stepcount += stepinc;
