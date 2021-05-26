@@ -63,17 +63,16 @@
         } else {
           // wrong!
           fade = function(element, startcolor, endcolor, time_elapsed) {
-            var element = document.getElementById("wrapper")
-            var currentcolor = startcolor.copy();
-            var colorchange = [
-              (endcolor[0] - startcolor[0]) / time_elapsed / 60
-              (endcolor[1] - startcolor[1]) / time_elapsed / 60
-              (endcolor[2] - startcolor[2]) / time_elapsed / 60
-            ];
-            var stepcount = 0;
-            var stepinc = 1;
-            var maxsteps = time_elapsed * 60; // 1 second
-            var timer = setInterval(function() {
+            var currentcolor = startcolor,
+                colorchange = [
+                  (endcolor[0] - startcolor[0]) / time_elapsed / 60
+                  (endcolor[1] - startcolor[1]) / time_elapsed / 60
+                  (endcolor[2] - startcolor[2]) / time_elapsed / 60
+                ],
+                stepcount = 0,
+                stepinc = 1,
+                maxsteps = time_elapsed * 60, // 1 second
+                timer = setInterval(function() {
                 currentcolor[0] = currentcolor[0] - stepinc * colorchange[0]
                 currentcolor[1] = currentcolor[1] - stepinc * colorchange[1]
                 currentcolor[2] = currentcolor[2] - stepinc * colorchange[2]
