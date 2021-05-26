@@ -97,7 +97,7 @@
 
     <!-- footer -->
     <footer class="w3-container padding-64 w3-center w3-opacity">
-      <p>
+      <p class="padding-16">
         Here is a hint, if you need one.
       </p>
       <button id="button_hint_1" class="w3-button w3-black large vertical-center" onclick="hint1()">
@@ -141,16 +141,17 @@
           fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
         }
       }
-      function hint1() {
-        var button = document.getElementById("button_hint_1")
-        if (document.getElementById("text_hint_1") == null) {
-          var p = document.createElement("p")
-          p.classList.add("padding-8")
-          p.id = "text_hint_1"
-          p.innerHTML = "Hint: Use the concept of moment of a force about a pivot."
-          document.getElementById("footer").appendChild(p)
-        }
+    }
+    function hint1() {
+      var button = document.getElementById("button_hint_1")
+      if (document.getElementById("text_hint_1") == null) {
+        var p = document.createElement("p")
+        p.classList.add("padding-8")
+        p.id = "text_hint_1"
+        p.innerHTML = "Hint: Use the concept of moment of a force about a pivot."
+        document.getElementById("footer").appendChild(p)
       }
+    }
     </script>
     
     <!-- end of body -->
