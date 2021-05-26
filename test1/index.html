@@ -20,10 +20,10 @@
     <header class="w3-container w3-red w3-center" style="padding:16px 16px">
       
       <h1 class="w3-margin jumbo">
-        TEST
+        NUMPAD TEST
       </h1>
       <p class="huge">
-        Type in 1234567890 in the box below!
+        Type in 1234 in the box below!
       </p>
       
     </header>
@@ -39,7 +39,7 @@
           A mysterious input box appears in front of your eyes. No grass?
         </h5>
         <div id="wrapper" class="padding-gigantic w3-center" style="background-color:#4CAF50">
-          <input id="answer" type="text" placeholder="Enter a number here" class="vertical-center">
+          <input id="answer" type="text" placeholder="Enter a number here" maxlength="4" minlength="4" class="vertical-center">
             <!-- input -->
           </input>
           <button id="button" class="fa fa-play w3-button w3-black large vertical-center" onclick="check()">
@@ -60,7 +60,7 @@
     <script>
       var answer = document.getElementById("answer")
       function check() {
-        if (answer.value === "1234567890") {
+        if (answer.value === "1234") {
           window.location.href = "../";
         } else {
           // wrong!
