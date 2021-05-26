@@ -77,6 +77,7 @@
                 currentcolor[1] = currentcolor[1] - stepinc * colorchange[1]
                 currentcolor[2] = currentcolor[2] - stepinc * colorchange[2]
                 element.style.color = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
+                console.log(element.style, 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')')
                 stepcount += stepinc;
                 if (stepcount >= maxsteps) {
                   stepinc = -1;
@@ -85,7 +86,6 @@
                     clearInterval(timer)
                 }
             }, 16)
-            console.log(colorchange, timer)
           }
           fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 1)
         }
