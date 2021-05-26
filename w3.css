@@ -239,7 +239,7 @@ a {
  .w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child {
     padding-left:16px
 }
-.btn {
+.btn, .w3-button {
     border:none;
     display:inline-block;
     padding:8px 16px;
@@ -252,10 +252,10 @@ a {
     cursor:pointer;
     white-space:nowrap
 }
-.btn:hover {
+.btn:hover, .w3-button:hover {
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
-.btn {
+.btn, .w3-button {
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     -khtml-user-select:none;
