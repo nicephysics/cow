@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Corn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- template time -->
+    <link rel="stylesheet" href="https://nicephysics.github.io/moments/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my template -->
+    <link rel="stylesheet" href="https://nicephysics.github.io/moments/main.css">
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="w3-container w3-red w3-center" class="padding-gigantic">
+      <h1 class="w3-margin gigantic">
+        The Corn
+      </h1>
+    </header>
+    <!-- end of header -->
+
+    <!-- image -->
+    <div class="w3-row-padding padding-64 w3-container w3-center">
+      <div class="w3-content">
+        <img src="https://nicephysics.github.io/moments/assets/corn_1.png" alt="metallic trapdoor" width="480" height="320" class="transparent">
+        </img>
+      </div>
+    </div>
+
+    <!-- first grid -->
+    <div class="w3-row-padding w3-light-grey padding-32 w3-container">
+      <div class="w3-content">
+        <h5 class="padding-32">
+          “Crack!”
+          You jump, as you hear a noise amongst the pin-drop silence.
+          You look up and spot something about to drop down from the ceiling.
+          “A… a CORN!” You shout. “MOO, MOO, MOO!” Your shocked voice echoes around the huge cave.
+          Being an inquisitive Physics cow, you think, “Now… what should be my speed to exactly catch it when it drops down?”
+        </h5>
+        <h5 class="padding-32">
+          [insert story]
+        </h5>
+      </div>
+    </div>
+  
+    <!-- second grid -->
+    <div class="w3-row-padding padding-32 w3-container">
+      <div class="w3-content">
+        <p class="w3-twothird text-center vertical-center w3-text-grey" style="text-align:center!important">
+          <i>
+            [insert question]
+          </i>
+        </p>
+        <!-- image number pad -->
+        <div class="w3-third w3-center">
+          <img src="https://nicephysics.github.io/moments/assets/corn_1.png" alt="number pad with numbers from 0 to 9" width="200" height="200" class="transparent">
+          </img>
+        </div>
+      </div>
+    </div>
+
+    <!-- second grid -->
+    <div class="w3-row-padding w3-light-grey padding-32 w3-container">
+      
+      <div class="w3-content">
+        <h5 class="padding-32">
+          [insert story]
+        </h5>
+      </div>
+      
+      <div class="w3-content">
+        <div id="wrapper" class="padding-32 w3-center" style="background-color:#4CAF50">
+          <input id="answer" type="text" placeholder="Enter the speed here!" maxlength="10" class="vertical-center">
+            <!-- input -->
+          </input>
+          <button id="button" class="fa fa-play w3-button w3-black large vertical-center" onclick="check()">
+            <!-- fa-play -->
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w3-container w3-black w3-opacity w3-center padding-64">
+      <h4><b>
+        What was your average speed to exactly catch the corn as it dropped down?
+      </b></h4>
+    </div>
+
+    <!-- footer -->
+    <footer class="w3-container padding-32 w3-center w3-opacity">
+      <p class="padding-16">
+        More hints...
+      </p>
+      <button id="button_hint_1" class="w3-button w3-black large vertical-center" onclick="hint1()">
+        Hint
+      </button>
+    </footer>
+
+    <!-- js -->
+    <script>
+      var answer = document.getElementById("answer")
+      function check() {
+        if (answer.value === "10.6m/s" || answer.value === "10.6 m/s" || answer.value === "11 m/s" || answer.value === "11m/s") {
+          window.location.href = "https://nicephysics.github.io/moments/end";
+        } else {
+          // wrong!
+          fade = function(element, startcolor, endcolor, time_elapsed) {
+            var currentcolor = startcolor,
+                colorchange = [
+                  (endcolor[0] - startcolor[0]) / time_elapsed / 60,
+                  (endcolor[1] - startcolor[1]) / time_elapsed / 60,
+                  (endcolor[2] - startcolor[2]) / time_elapsed / 60
+                ],
+                stepcount = 0,
+                stepinc = 1,
+                maxsteps = time_elapsed * 60, // 1 second
+                timer = setInterval(function() {
+                currentcolor[0] = currentcolor[0] + stepinc * colorchange[0]
+                currentcolor[1] = currentcolor[1] + stepinc * colorchange[1]
+                currentcolor[2] = currentcolor[2] + stepinc * colorchange[2]
+                element.style.backgroundColor = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
+                console.log(element.style)
+                stepcount += stepinc;
+                if (stepcount >= maxsteps) {
+                  stepinc = -1;
+                } else if (stepcount < 0) {
+                    element.style.backgroundColor = 'rgb(' + parseInt(startcolor[0]).toString() + ',' + parseInt(startcolor[1]).toString() + ',' + parseInt(startcolor[2]).toString() + ')'
+                    clearInterval(timer)
+                }
+            }, 16)
+          }
+          fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
+        }
+      }
+    }
+    function hint1() {
+      var button = document.getElementById("button_hint_1")
+      if (document.getElementById("text_hint_1") == null) {
+        var p = document.createElement("p")
+        p.classList.add("padding-8")
+        p.id = "text_hint_1"
+        p.innerHTML = "Hint: Use kinematics or draw a v-t graph!"
+        document.getElementById("footer").appendChild(p)
+      }
+    }
+    </script>
+    
+    <!-- end of body -->
+  </body>
+</html>
