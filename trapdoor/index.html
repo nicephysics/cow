@@ -66,6 +66,7 @@
 
     <!-- second grid -->
     <div class="w3-row-padding w3-light-grey padding-32 w3-container">
+      
       <div class="w3-content">
         <h5 class="padding-32">
           You rack your brains. This simple question should be a piece of cake to you, you think.
@@ -73,13 +74,24 @@
           Aha! You punch your answer on the pad, and the trapdoor swings open, leading you to another place…
         </h5>
       </div>
+      
+      <div class="w3-content">
+        <div id="wrapper" class="padding-32 w3-center" style="background-color:#4CAF50">
+          <input id="answer" type="text" placeholder="Enter a number here" maxlength="4" minlength="4" class="vertical-center">
+            <!-- input -->
+          </input>
+          <button id="button" class="fa fa-play w3-button w3-black large vertical-center" onclick="check()">
+            <!-- fa-play -->
+          </button>
+        </div>
+      </div>
+
     </div>
 
     <div class="w3-container w3-black w3-opacity w3-center padding-64">
       <h4>
         What is the answer to unlock the trapdoor?
       </h4>
-      
     </div>
 
     <!-- footer -->
@@ -88,6 +100,44 @@
         Hi!
       </p>
     </footer>
+
+    <!-- js -->
+    <script>
+      var answer = document.getElementById("answer")
+      function check() {
+        if (answer.value === "1234") {
+          window.location.href = "https://nicephysics.github.io/moments/cave";
+        } else {
+          // wrong!
+          fade = function(element, startcolor, endcolor, time_elapsed) {
+            var currentcolor = startcolor,
+                colorchange = [
+                  (endcolor[0] - startcolor[0]) / time_elapsed / 60,
+                  (endcolor[1] - startcolor[1]) / time_elapsed / 60,
+                  (endcolor[2] - startcolor[2]) / time_elapsed / 60
+                ],
+                stepcount = 0,
+                stepinc = 1,
+                maxsteps = time_elapsed * 60, // 1 second
+                timer = setInterval(function() {
+                currentcolor[0] = currentcolor[0] + stepinc * colorchange[0]
+                currentcolor[1] = currentcolor[1] + stepinc * colorchange[1]
+                currentcolor[2] = currentcolor[2] + stepinc * colorchange[2]
+                element.style.backgroundColor = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
+                console.log(element.style)
+                stepcount += stepinc;
+                if (stepcount >= maxsteps) {
+                  stepinc = -1;
+                } else if (stepcount < 0) {
+                    element.style.backgroundColor = 'rgb(' + parseInt(startcolor[0]).toString() + ',' + parseInt(startcolor[1]).toString() + ',' + parseInt(startcolor[2]).toString() + ')'
+                    clearInterval(timer)
+                }
+            }, 16)
+          }
+          fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
+        }
+      }
+    </script>
     
     <!-- end of body -->
   </body>
