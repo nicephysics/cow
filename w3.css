@@ -1088,46 +1088,61 @@ a {
 .w3-margin-right{
     margin-right:16px!important
 }
- .w3-padding-small{
+.w3-padding-none, .padding-none {
+    padding:0px 0px!important
+}
+.w3-padding-tiny, .padding-tiny {
+    padding:2px 4px!important
+}
+.w3-padding-small, .padding-small {
     padding:4px 8px!important
 }
-.w3-padding{
+.w3-padding, .padding-medium, .padding {
     padding:8px 16px!important
 }
-.w3-padding-large{
+.w3-padding-large, .padding-large {
     padding:12px 24px!important
 }
- .w3-padding-16{
+.w3-padding-huge, .padding-huge {
+    padding:18px 36px!important
+}
+.w3-padding-gigantic, .padding-gigantic {
+    padding:24px 48px!important
+}
+.w3-padding-16, .padding-16 {
     padding-top:16px!important;
     padding-bottom:16px!important
 }
-.w3-padding-24{
+.w3-padding-24, .padding-24 {
     padding-top:24px!important;
     padding-bottom:24px!important
 }
- .w3-padding-32{
+.w3-padding-32, .padding-32 {
     padding-top:32px!important;
     padding-bottom:32px!important
 }
-.w3-padding-48{
+.w3-padding-48, .padding-48 {
     padding-top:48px!important;
     padding-bottom:48px!important
 }
- .w3-padding-64{
+.w3-padding-64, .padding-64 {
     padding-top:64px!important;
     padding-bottom:64px!important
 }
- .w3-padding-top-64{
+.w3-padding-top-64, .padding-top-64 {
     padding-top:64px!important
 }
-.w3-padding-top-48{
+.w3-padding-top-48, .padding-top-48 {
     padding-top:48px!important
 }
- .w3-padding-top-32{
+ .w3-padding-top-32, .padding-top-32 {
     padding-top:32px!important
 }
-.w3-padding-top-24{
+.w3-padding-top-24, .padding-top-24 {
     padding-top:24px!important
+}
+.w3-padding-top-16, .padding-top-16 {
+    padding-top:16px!important
 }
  .w3-left{
     float:left!important
