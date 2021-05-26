@@ -89,7 +89,7 @@
       var answer = document.getElementById("answer")
       function check() {
         if (answer.value === "10.6m/s" || answer.value === "10.6 m/s" || answer.value === "11 m/s" || answer.value === "11m/s") {
-          window.location.href = "https://nicephysics.github.io/moments/end";
+          window.location.href = "https://nicephysics.github.io/moments/end"
         } else {
           // wrong!
           fade = function(element, startcolor, endcolor, time_elapsed) {
@@ -103,24 +103,26 @@
                 stepinc = 1,
                 maxsteps = time_elapsed * 60, // 1 second
                 timer = setInterval(function() {
-                currentcolor[0] = currentcolor[0] + stepinc * colorchange[0]
-                currentcolor[1] = currentcolor[1] + stepinc * colorchange[1]
-                currentcolor[2] = currentcolor[2] + stepinc * colorchange[2]
-                element.style.backgroundColor = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
-                console.log(element.style)
-                stepcount += stepinc;
-                if (stepcount >= maxsteps) {
-                  stepinc = -1;
-                } else if (stepcount < 0) {
-                    element.style.backgroundColor = 'rgb(' + parseInt(startcolor[0]).toString() + ',' + parseInt(startcolor[1]).toString() + ',' + parseInt(startcolor[2]).toString() + ')'
-                    clearInterval(timer)
-                }
-            }, 16)
+                  currentcolor[0] = currentcolor[0] + stepinc * colorchange[0]
+                  currentcolor[1] = currentcolor[1] + stepinc * colorchange[1]
+                  currentcolor[2] = currentcolor[2] + stepinc * colorchange[2]
+                  element.style.backgroundColor = 'rgb(' + parseInt(currentcolor[0]).toString() + ',' + parseInt(currentcolor[1]).toString() + ',' + parseInt(currentcolor[2]).toString() + ')'
+                  console.log(element.style)
+                  stepcount += stepinc;
+                  if (stepcount >= maxsteps) {
+                    stepinc = -1;
+                  } else if (stepcount < 0) {
+                      element.style.backgroundColor = 'rgb(' + parseInt(startcolor[0]).toString() + ',' + parseInt(startcolor[1]).toString() + ',' + parseInt(startcolor[2]).toString() + ')'
+                      clearInterval(timer)
+                  }
+                }, 16)
+          // end of fade function definition
           }
           fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
         }
       }
-    }
+    </script>
+    <script>
     function hint1() {
       var button = document.getElementById("button_hint_1")
       if (document.getElementById("text_hint_1") == null) {
