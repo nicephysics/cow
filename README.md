@@ -1,2 +1,2 @@
-# moments
-A Large Cow.
+# Physics Puzzle: Moments
+A cow.
