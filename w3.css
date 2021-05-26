@@ -1042,19 +1042,19 @@ a {
 .toojumbo, .size-200 {
     font-size:200px!important
 }
-.w3-left-align{
+.w3-left-align, .text-left {
     text-align:left!important
 }
-.w3-right-align{
+.w3-right-align, .text-right {
     text-align:right!important
 }
-.w3-justify{
+.w3-justify, .text-justify, .justify {
     text-align:justify!important
 }
-.w3-center{
+.w3-center, .text-center {
     text-align:center!important
 }
- .w3-border-0{
+.w3-border-0, .border-0 {
     border:0!important
 }
 .w3-border{
