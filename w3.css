@@ -1097,6 +1097,9 @@ a {
     box-shadow:none!important
 }
 /* Colors */
+.transparent {
+    background-color:transparent
+}
  .w3-amber,.w3-hover-amber:hover{
     color:#000!important;
     background-color:#ffc107!important
@@ -1294,6 +1297,9 @@ a {
 }
  .w3-text-dark-grey,.w3-hover-text-dark-grey:hover,.w3-text-dark-gray,.w3-hover-text-dark-gray:hover{
     color:#3a3a3a!important
+}
+ .border-transparent,.hover-border-transparent:hover {
+    border-color: transparent!important
 }
  .w3-border-amber,.w3-hover-border-amber:hover{
     border-color:#ffc107!important
