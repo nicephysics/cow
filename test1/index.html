@@ -38,7 +38,7 @@
         <h5 class="padding-32">
           A mysterious input box appears in front of your eyes. No grass?
         </h5>
-        <div id="wrapper" class="w3-green padding-medium w3-center">
+        <div id="wrapper" class="padding-medium w3-center" style="color:#4CAF50">
           <input id="answer" type="text" placeholder="Enter a number here"></input>
           <button id="button" class="fa fa-play w3-button w3-black large" onclick="check()">
             <!-- fa-play -->
@@ -61,7 +61,9 @@
         if (answer.value === "1234567890") {
           window.location.href = "../";
         } else {
+          // wrong!
           var element = document.getElementById("wrapper")
+          var startcolor = [76, 175, 80];
           var currentcolor = [76, 175, 80];
           var colorchange = [99, -99, 0];
           var endcolor = [currentcolor[0] - colorchange[0], 0, 0];
@@ -72,13 +74,13 @@
               currentcolor[0] = parseInt(currentcolor[0] - stepinc * colorchange[0]);
               currentcolor[1] = parseInt(currentcolor[1] - stepinc * colorchange[1]);
               currentcolor[2] = parseInt(currentcolor[2] - stepinc * colorchange[2]);
-              element.style.backgroundColor = 'rgb(' + currentcolor.toString() + ')';
+              element.style.color = 'rgb(' + currentcolor.toString() + ')';
               stepcount += stepinc;
               if (stepcount >= steps) {
                 stepinc = -1;
               } else if (stepcount < 0) {
-                  element.style.backgroundColor = 'rgb(' + currentcolor.toString() + ')';
-                  clearInterval(timer);                
+                  element.style.color = 'rgb(' + startcolor.toString() + ')';
+                  clearInterval(timer);
               }
           }, 16;
         }
