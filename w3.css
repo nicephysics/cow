@@ -955,31 +955,79 @@ a {
 .w3-sepia-min{
     filter:sepia(50%)
 }
- .w3-tiny{
+.onesize, .size-one, .size-1 {
+    font-size:6px!important    
+}
+.waytootiny, .size-4 {
+    font-size:6px!important    
+}
+.waytoosmall, .size-5 {
+    font-size:6px!important    
+}
+.tootiny, .size-6 {
+    font-size:6px!important    
+}
+.toosmall, .size-7 {
+    font-size:7px!important    
+}
+.tinier, .size-8 {
+    font-size:8px!important
+}
+.tinyy, .size-9 {
+    font-size:9px!important
+}
+.w3-tiny, .tiny, .size-10 {
     font-size:10px!important
 }
-.w3-small{
+.smaller, .size-11 {
+    font-size:11px!important
+}
+.w3-small, .small, .size-12 {
     font-size:12px!important
 }
-.w3-medium{
+.smalll, .small2, .size-13 {
+    font-size:13px!important
+}
+.smallll, .small3, .size-14 {
+    font-size:14px!important
+}
+.w3-medium, .medium, .size-15 {
     font-size:15px!important
 }
-.w3-large{
+.regular, .size-16 {
+    font-size:16px!important
+}
+.regularr, .regular2, .size-17 {
+    font-size:17px!important
+}
+.w3-large, .large, .size-18 {
     font-size:18px!important
 }
- .w3-xlarge{
+ .w3-xlarge, .huge, .size-24 {
     font-size:24px!important
 }
-.w3-xxlarge{
+.w3-xxlarge, .gigantic, .size-36 {
     font-size:36px!important
 }
-.w3-xxxlarge{
+.w3-xxxlarge, .enormous, .size-48 {
     font-size:48px!important
 }
-.w3-jumbo{
+.w3-jumbo, .jumbo, .size-64 {
     font-size:64px!important
 }
- .w3-left-align{
+.toolarge, .size-96 {
+    font-size:96px!important
+}
+.toohuge, .size-120 {
+    font-size:120px!important
+}
+.toogigantic, .size-150 {
+    font-size:150px!important
+}
+.toojumbo, .size-200 {
+    font-size:200px!important
+}
+.w3-left-align{
     text-align:left!important
 }
 .w3-right-align{
