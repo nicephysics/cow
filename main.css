@@ -10,3 +10,32 @@ body,h1,h2,h3,h4,h5,h6 {
 .w3-bar,h1,button {
   font-family: "Montserrat", sans-serif
 }
+
+.scroll-to-top {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all .5s ease
+}
+
+.scroll-to-top-show {
+  opacity: 1;
+  transform: translateY(0)
+}
