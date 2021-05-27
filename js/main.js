@@ -34,4 +34,6 @@ function addScrollButton() {
   document.querySelector("body").appendChild(p)
 }
 
-addScrollButton()
+document.addEventListener("DOMContentLoaded", function(event) {
+  addScrollButton()
+})
