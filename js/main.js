@@ -31,7 +31,7 @@ function addScrollButton() {
   scroll_button.innerHTML = "↑"
   scroll_button.classList.add("scroll-to-top")
   scroll_button.classList.add("w3-button")
-  document.querySelector("body").appendChild(p)
+  document.querySelector("body").appendChild(scroll_button)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
