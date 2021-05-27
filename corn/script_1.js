@@ -1,7 +1,7 @@
 var answer = document.getElementById("answer")
 function check() {
   if (answer.value === "10.6m/s" || answer.value === "10.6 m/s" || answer.value === "11 m/s" || answer.value === "11m/s") {
-    window.location.href = "https://nicephysics.github.io/moments/end"
+    window.location.href = "https://nicephysics.github.io/moments/end_itsh"
   } else {
     // wrong!
     fade = function(element, startcolor, endcolor, time_elapsed) {
