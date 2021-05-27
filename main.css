@@ -19,7 +19,8 @@ body,h1,h2,h3,h4,h5,h6 {
   cursor: pointer;
   font-size: 16px;
   line-height: 48px;
-  width: 48px;
+  width: 48px!important;
+  height: 48px!important;
   
   /* place it at the bottom right corner */
   position: fixed;
