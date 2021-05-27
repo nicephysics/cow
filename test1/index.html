@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- template time -->
-    <link rel="stylesheet" href="../w3.css">
+    <link rel="stylesheet" href="https://nicephysics.github.io/moments/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- my template -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://nicephysics.github.io/moments/main.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXEP243M4F"></script>
     <script>
@@ -31,6 +31,10 @@
       <h1 class="w3-margin jumbo">
         The 4-Digit Test
       </h1>
+      <audio controls autoplay muted>
+        <source src="https://nicephysics.github.io/moments/assets/test_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
       <!-- <p class="huge"></p> -->
       
     </header>
@@ -71,7 +75,7 @@
       var answer = document.getElementById("answer")
       function check() {
         if (answer.value === "1234") {
-          window.location.href = "../";
+          window.location.href = "https://nicephysics.github.io/moments/introduction";
         } else {
           // wrong!
           fade = function(element, startcolor, endcolor, time_elapsed) {
