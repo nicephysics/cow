@@ -1,6 +1,6 @@
 function addScrollButton() {
   // elements
-  var target = document.getElementById("footer"), // target the footer
+  var target = document.querySelector("footer"), // target the footer
       scroll_button = document.createElement("button"), // create a scroll to top button
       rootElement = document.documentElement // and the root element, for scrolling
   // the callback for intersection observers
