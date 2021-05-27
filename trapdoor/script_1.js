@@ -1,6 +1,6 @@
 var answer = document.getElementById("answer")
 function check() {
-  if (answer.value === "280") {
+  if (answer.value === "250") {
     window.location.href = "https://nicephysics.github.io/moments/cave";
   } else {
     // wrong!
