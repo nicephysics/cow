@@ -1,6 +1,7 @@
 var answer = document.getElementById("answer")
 function check() {
-  if (answer.value === "250") {
+  let ans = (answer.value === "250")
+  if (ans) {
     window.location.href = "https://nicephysics.github.io/moments/cave";
   } else {
     // wrong!
@@ -31,7 +32,10 @@ function check() {
     // end of fade function definition
     }
     fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
+    // moo!
+    moo()
   }
+  return ans
 }
 function hint1() {
   var button = document.getElementById("button_hint_1")
