@@ -20,7 +20,7 @@ function checkStorage() {
   var button = document.getElementById("music_button")
   if (playing == null) {
     localStorage.setItem("music_play", false)
-  } else if (playing == true) {
+  } else if (playing) {
     music.play()
     button.classList.remove("fa-play")
     button.classList.add("fa-pause")
@@ -29,7 +29,6 @@ function checkStorage() {
     button.classList.remove("fa-pause")
     button.classList.add("fa-play")
   }
-  console.log(playing, playing == true, music)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
