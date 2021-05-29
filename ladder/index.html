@@ -3,10 +3,13 @@
   
   <head>
     <title>The Ladder</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="https://nicephysics.github.io/moments/assets/icon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://nicephysics.github.io/moments/assets/icon_16.png" sizes="16x16" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- template time -->
-    <link rel="stylesheet" href="https://nicephysics.github.io/moments/w3.css">
+    <link rel="stylesheet" href="https://nicephysics.github.io/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,24 +30,24 @@
   <body>
 
     <!-- header -->
-    <header class="w3-container w3-red w3-center" class="padding-gigantic">
-      <h1 class="w3-margin gigantic">
+    <header class="container red center" class="padding-gigantic">
+      <h1 class="margin gigantic">
         The Ladder
       </h1>
     </header>
     <!-- end of header -->
 
     <!-- image -->
-    <div class="w3-row-padding padding-64 w3-container w3-center">
-      <div class="w3-content">
+    <div class="row-padding padding-64 container center">
+      <div class="content">
         <img src="https://nicephysics.github.io/moments/assets/cave_ladder.jpg" alt="a ladder in a cave" width="338" height="450" class="transparent">
         </img>
       </div>
     </div>
 
     <!-- first grid -->
-    <div class="w3-row-padding w3-light-grey padding-32 w3-container">
-      <div class="w3-content">
+    <div class="row-padding light-grey padding-32 container">
+      <div class="content">
         <h5 class="padding-32">
           The cave extends into a larger cave.
           It has glittering ‘stars’ on the top of the ceiling, which is <i>around</i> 10 meters high!
@@ -68,9 +71,9 @@
     </div>
   
     <!-- second grid -->
-    <div class="w3-row-padding padding-32 w3-container">
-      <div class="w3-content">
-        <p class="w3-twothird text-center vertical-center w3-text-grey" style="text-align:center!important">
+    <div class="row-padding padding-32 container">
+      <div class="content">
+        <p class="twothird text-center vertical-center text-grey" style="text-align:center!important">
           <i>
             This uniform ladder, <br>
             12 metres long and 100 kg, <br>
@@ -80,7 +83,7 @@
           The ladder can withstand only a maximum friction force of <b>400 N</b> before slipping on the ground.
         </p>
         <!-- image ladder -->
-        <div class="w3-third w3-center">
+        <div class="third center">
           <img src="https://nicephysics.github.io/moments/assets/ladder.png" alt="a ladder" width="256" height="256" class="transparent">
           </img>
         </div>
@@ -88,9 +91,9 @@
     </div>
 
     <!-- third grid - input -->
-    <div class="w3-row-padding w3-light-grey padding-32 w3-container">
+    <div class="row-padding light-grey padding-32 container">
       
-      <div class="w3-content">
+      <div class="content">
         <h5 class="padding-24">
           Ah, you think.
           The ladder might slip on the ground if you climb on it to a certain distance, but you just don’t know what distance.
@@ -106,7 +109,7 @@
     </div>
 
     <!-- fourth grid -->
-    <div class="w3-container w3-black w3-opacity w3-center padding-32">
+    <div class="container black opacity center padding-32">
       <h4>
         What is the maximum distance you can climb up the ladder just before the ladder slips?
       </h4>
@@ -116,14 +119,14 @@
     </div>
 
     <!-- fifth grid -->
-    <div class="w3-row-padding w3-light-grey padding-32 w3-container">
+    <div class="row-padding light-grey padding-32 container">
       
-      <div class="w3-content">
-        <div id="wrapper" class="padding-32 w3-center" style="background-color:#4CAF50">
+      <div class="content">
+        <div id="wrapper" class="padding-32 center" style="background-color:#4CAF50">
           <input id="answer" type="text" placeholder="Enter the answer here" maxlength="10" class="vertical-center">
             <!-- input -->
           </input>
-          <button id="button" class="fa fa-play w3-button w3-black large vertical-center" onclick="check()">
+          <button id="button" class="fa fa-play button black large vertical-center" onclick="check()">
             <!-- fa-play -->
           </button>
         </div>
@@ -132,28 +135,28 @@
     </div>
 
     <!-- nothing?
-    <div class="w3-container w3-dark-grey w3-center padding-64">
+    <div class="container dark-grey center padding-64">
     </div>
      -->
 
     <!-- footer -->
-    <footer id="footer" class="w3-container padding-32 w3-center w3-opacity">
+    <footer id="footer" class="container padding-32 center opacity">
       <p class="padding-16">
         Here are some hints for this puzzle... click on the hints in order!
       </p>
-      <button id="button_hint_1" class="w3-button w3-black large vertical-center" onclick="hint1()">
+      <button id="button_hint_1" class="button black large vertical-center" onclick="hint1()">
         Hint 1
       </button>
-      <button id="button_hint_2" class="w3-button w3-black large vertical-center" onclick="hint2()">
+      <button id="button_hint_2" class="button black large vertical-center" onclick="hint2()">
         Hint 2
       </button>
-      <button id="button_hint_3" class="w3-button w3-black large vertical-center" onclick="hint3()">
+      <button id="button_hint_3" class="button black large vertical-center" onclick="hint3()">
         Hint 3
       </button>
-      <button id="button_hint_3" class="w3-button w3-black large vertical-center" onclick="hint4()">
+      <button id="button_hint_3" class="button black large vertical-center" onclick="hint4()">
         Hint 4
       </button>
-      <button id="button_hint_3" class="w3-button w3-black large vertical-center" onclick="hint5()">
+      <button id="button_hint_3" class="button black large vertical-center" onclick="hint5()">
         Hint 5
       </button>
     </footer>
