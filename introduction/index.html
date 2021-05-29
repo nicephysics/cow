@@ -15,6 +15,7 @@
     <!-- my template -->
     <link rel="stylesheet" href="https://nicephysics.github.io/moments/main.css">
     <script src="https://nicephysics.github.io/moments/js/main.js"></script>
+    <script src="https://nicephysics.github.io/moments/js/music.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXEP243M4F"></script>
     <script>
@@ -33,31 +34,6 @@
         Introduction
       </h1>
     </header>
-    <!-- header script: play button -->
-    <script>
-      var music = document.createElement("audio")
-      var button = document.createElement("button")
-      document.getElementById("header").appendChild(music)
-      document.getElementById("header").appendChild(button)
-      // setup audio
-      music.id = "music"
-      music.hidden = true
-      music.loop = true
-      // setup button
-      button.id = "music_button"
-      button.setAttribute("class", "fa fa-play button circle-button circle-button-48 black padding margin-top margin-right large topright animate-zoom")
-      button.addEventListener("click", function() {
-        if (button.classList.contains("fa-play")) {
-          music.play()
-          button.classList.remove("fa-play")
-          button.classList.add("fa-pause")
-        } else {
-          music.pause()
-          button.classList.remove("fa-pause")
-          button.classList.add("fa-play")
-        }
-      }
-    </script>
     <!-- end of header -->
 
     <!-- image -->
