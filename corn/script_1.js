@@ -1,4 +1,5 @@
 var answer = document.getElementById("answer")
+
 function check() {
   if (answer.value === "10.6m/s" || answer.value === "10.6 m/s" || answer.value === "11 m/s" || answer.value === "11m/s") {
     window.location.href = "https://nicephysics.github.io/moments/end_itsh"
@@ -33,6 +34,13 @@ function check() {
     fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
   }
 }
+
+answer.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) { // "enter"
+    event.preventDefault()
+    check()
+  }
+})
 
 function hint1() {
   var button = document.getElementById("button_hint_1")
