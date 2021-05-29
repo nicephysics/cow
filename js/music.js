@@ -1,8 +1,6 @@
 function addMusicButton() {
   var music = document.createElement("audio")
   var button = document.createElement("button")
-  document.getElementById("header").appendChild(music)
-  document.getElementById("header").appendChild(button)
   // setup audio
   music.id = "music"
   music.hidden = true
@@ -21,6 +19,8 @@ function addMusicButton() {
       button.classList.add("fa-play")
     }
   }
+  document.querySelector("header").appendChild(music)
+  document.querySelector("header").appendChild(button)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
