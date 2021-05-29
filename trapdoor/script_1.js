@@ -38,6 +38,14 @@ function check() {
   }
   return ans
 }
+
+answer.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) { // "enter"
+    event.preventDefault()
+    check()
+  }
+})
+
 function hint1() {
   var button = document.getElementById("button_hint_1")
   if (document.getElementById("text_hint_1") == null) {
