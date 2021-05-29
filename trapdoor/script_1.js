@@ -1,4 +1,5 @@
 var answer = document.getElementById("answer")
+
 function check() {
   let ans = (answer.value === "250")
   if (ans) {
