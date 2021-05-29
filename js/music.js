@@ -42,5 +42,5 @@ function addMusicButton() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var button = document.getElementById("music_button")
-  button.addEventListener("click", play)
+  button.addEventListener("click", function() { play() })
 })
