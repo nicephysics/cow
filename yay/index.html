@@ -29,19 +29,15 @@
 
     <!-- header -->
     <header class="container red center" style="padding: 64px 16px">
-      
       <h1 class="margin jumbo">
         Yay!
       </h1>
-      <!--
-      <p class="tiny">
-        Yay!
-      </p>
-      <button onclick="location.href='https://nicephysics.github.io/moments/introduction'" class="button black padding-large margin-top large">
-        Start!
-      </button>
-      -->
-      
+      <audio id="music" hidden loop>
+        <source src="https://nicephysics.github.io/moments/assets/yay_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <button id="music_button" class="fa fa-play button music-circle-button black padding margin-top margin-right large topright animate-zoom" onclick="play()"></button>
+      <script src="https://nicephysics.github.io/moments/js/music.js"></script>      
     </header>
     <!-- end of header -->
     
