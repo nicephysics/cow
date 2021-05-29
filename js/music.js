@@ -2,12 +2,12 @@ function play() {
   var music = document.getElementById("music")
   var button = document.getElementById("music_button")
   if (button.classList.contains("fa-play")) {
-    localStorage.setItem("music_play", true)
+    localStorage.setItem("music_play", "true")
     music.play()
     button.classList.remove("fa-play")
     button.classList.add("fa-pause")
   } else {
-    localStorage.setItem("music_play", false)
+    localStorage.setItem("music_play", "false")
     music.pause()
     button.classList.remove("fa-pause")
     button.classList.add("fa-play")
@@ -19,8 +19,8 @@ function checkStorage() {
   var music = document.getElementById("music")
   var button = document.getElementById("music_button")
   if (playing == null) {
-    localStorage.setItem("music_play", false)
-  } else if (playing) {
+    localStorage.setItem("music_play", "false")
+  } else if (playing === "true") {
     music.play()
     button.classList.remove("fa-play")
     button.classList.add("fa-pause")
