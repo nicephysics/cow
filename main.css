@@ -21,8 +21,8 @@ body, h1, h2, h3, h4, h5, h6 {
   height: 48px!important;
   
   position: fixed!important;
-  top: 30px!important;
-  right: 30px!important;
+  top: 15px!important;
+  right: 15px!important;
 }
 
 .circle-button {
