@@ -1,4 +1,5 @@
 function play() {
+  console.log("clicked!")
   var music = document.getElementById("music")
   var button = document.getElementById("music_button")
   if (button.classList.contains("fa-play")) {
@@ -42,5 +43,6 @@ function addMusicButton() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var button = document.getElementById("music_button")
-  button.addEventListener("click", function() { play() })
+  button.onclick = play
+  // button.addEventListener("click", function() { play() })
 })
