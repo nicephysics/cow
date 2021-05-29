@@ -3,10 +3,13 @@
   
   <head>
     <title>Test 1</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="https://nicephysics.github.io/moments/assets/icon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://nicephysics.github.io/moments/assets/icon_16.png" sizes="16x16" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- template time -->
-    <link rel="stylesheet" href="https://nicephysics.github.io/moments/w3.css">
+    <link rel="stylesheet" href="https://nicephysics.github.io/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,9 +29,9 @@
   <body>
 
     <!-- header -->
-    <header class="w3-container w3-red w3-center" style="padding:16px 16px">
+    <header class="container red center" style="padding:16px 16px">
       
-      <h1 class="w3-margin jumbo">
+      <h1 class="margin jumbo">
         The 4-Digit Test
       </h1>
       <audio controls autoplay muted>
@@ -41,22 +44,22 @@
     <!-- end of header -->
 
     <!-- a grid -->
-    <div class="w3-row-padding padding-64 w3-container">
-      <div class="w3-content">
+    <div class="row-padding padding-64 container">
+      <div class="content">
         <h1>
           A Number Lock
         </h1>
         <h5 class="padding-16">
           You walked along the winding road, humming to yourself. Moo, moo, moo. All of a sudden, a random number lock fell from the sky. Or was it a sky?
         </h5>
-        <h5 class="padding-16 w3-text-grey">
+        <h5 class="padding-16 text-grey">
           Type the number 1234 below to continue!
         </h5>
-        <div id="wrapper" class="padding-gigantic w3-center" style="background-color:#4CAF50">
+        <div id="wrapper" class="padding-gigantic center" style="background-color:#4CAF50">
           <input id="answer" type="text" placeholder="Enter a number here" maxlength="4" minlength="4" class="vertical-center">
             <!-- input -->
           </input>
-          <button id="button" class="fa fa-play w3-button w3-black large vertical-center" onclick="check()">
+          <button id="button" class="fa fa-play button black large vertical-center" onclick="check()">
             <!-- fa-play -->
           </button>
         </div>
@@ -64,7 +67,7 @@
     </div>
 
     <!-- footer -->
-    <footer id="footer" class="w3-container padding-16 w3-center w3-opacity">
+    <footer id="footer" class="container padding-16 center opacity">
       <p>
         Created by a physics teacher.
       </p>
