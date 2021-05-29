@@ -1,7 +1,8 @@
 var answer = document.getElementById("answer")
 
 function check() {
-  let ans = (answer.value === "250")
+  let val = answer.value.replace(/\s/g, '')
+  let ans = (val === "250")
   if (ans) {
     window.location.href = "https://nicephysics.github.io/moments/cave";
   } else {
