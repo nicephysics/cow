@@ -38,8 +38,9 @@ function addMusicButton() {
   document.querySelector("header").appendChild(music)
   document.querySelector("header").appendChild(button)
 }
+*/
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  addMusicButton()
+  var button = document.getElementById("music_button")
+  button.addEventListener("click", play)
 })
-*/
