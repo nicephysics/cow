@@ -1,7 +1,9 @@
 var answer = document.getElementById("answer")
 
 function check() {
-  if (answer.value === "5.78 m" || answer.value === "5.78m" || answer.value === "5.8 m" || answer.value === "5.8m" || answer.value === "578 cm" || answer.value === "578cm" ) {
+  let val = answer.value.replace(/\s/g, '')
+  let ans = (val === "5.78m" || val === "5.8m" || val === "578cm")
+  if (ans) {
     window.location.href = "https://nicephysics.github.io/moments/corn"
   } else {
     // wrong!
@@ -35,6 +37,7 @@ function check() {
     // moo!
     moo()
   }
+  return ans
 }
 
 answer.addEventListener("keyup", function(event) {
