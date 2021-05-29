@@ -13,6 +13,17 @@ body,h1,h2,h3,h4,h5,h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.circle-button {
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.circle-button-48 {
+  width: 48px!important;
+  height: 48px!important;
+}
+
 .scroll-to-top {
   background-color: black;
   border: none;
