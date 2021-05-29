@@ -1,4 +1,4 @@
-## changed
+## CHANGED
 font-serif
 font-sans-serif
 font-cursive
@@ -8,7 +8,7 @@ image (all)
 btn (all) (w3-button?)
 disabled (probably for buttons)
 
-## mine
+## ADDED
 transparent
 wider-letters (8px)
 border-transparent
@@ -71,6 +71,7 @@ round-medium (round-4)
 round-large (round-8)
 round-huge (round-16)
 round-gigantic (round-32)
+container
 panel
 code
 codespan
@@ -79,3 +80,33 @@ text-right
 text-justify (justify)
 text-center
 border-0
+card, card-2, card-4
+animate-spin (spin)
+animate-fading
+animate-opacity (animate-opac)
+animate-top
+animate-left
+animate-right
+animate-bottom
+animate-zoom
+animate-input
+opacity, hover-opacity [60%]
+opacity-off, hover-opacity-off [0%]
+opacity-max (translucent) [75%]
+opacity-min (opacity-low) [25%]
+grayscale-max, hover-grayscale
+grayscale
+grayscale-min
+sepia-max, hover-sepia
+sepia
+sepia-min
+border
+border-top
+border-bottom
+border-left
+border-right
+topbar
+bottombar
+leftbar
+rightbar
+section
