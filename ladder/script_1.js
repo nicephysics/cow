@@ -32,6 +32,8 @@ function check() {
     // end of fade function definition
     }
     fade(document.getElementById("wrapper"), [76, 175, 80], [175, 76, 80], 0.6)
+    // moo!
+    moo()
   }
 }
 
