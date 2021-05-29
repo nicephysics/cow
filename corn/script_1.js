@@ -1,7 +1,9 @@
 var answer = document.getElementById("answer")
 
 function check() {
-  if (answer.value === "10.6m/s" || answer.value === "10.6 m/s" || answer.value === "11 m/s" || answer.value === "11m/s") {
+  let val = answer.value.replace(/\s/g, '')
+  let ans = (val === "10.6m/s" || val === "11m/s")
+  if (ans) {
     window.location.href = "https://nicephysics.github.io/moments/end_itsh"
   } else {
     // wrong!
@@ -35,6 +37,7 @@ function check() {
     // angry moo
     moo()
   }
+  return ans
 }
 
 answer.addEventListener("keyup", function(event) {
