@@ -1,6 +1,22 @@
+function play() {
+  var music = document.getElementById("music")
+  var button = document.getElementById("music_button")
+  if (button.classList.contains("fa-play")) {
+    music.play()
+    button.classList.remove("fa-play")
+    button.classList.add("fa-pause")
+  } else {
+    music.pause()
+    button.classList.remove("fa-pause")
+    button.classList.add("fa-play")
+  }
+}
+
+/*
 function addMusicButton() {
   var music = document.createElement("audio")
   var button = document.createElement("button")
+  var source = document.createElement("source")
   // setup audio
   music.id = "music"
   music.hidden = true
@@ -26,3 +42,4 @@ function addMusicButton() {
 document.addEventListener("DOMContentLoaded", function(event) {
   addMusicButton()
 })
+*/
