@@ -13,6 +13,18 @@ body,h1,h2,h3,h4,h5,h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.music-button {
+  border-radius: 50%!important;
+  cursor: pointer;
+  z-index: 100;
+  width: 48px!important;
+  height: 48px!important;
+  
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
 .circle-button {
   border-radius: 50%!important;
   cursor: pointer;
@@ -36,9 +48,6 @@ body,h1,h2,h3,h4,h5,h6 {
   height: 48px!important;
   
   /* place it at the bottom right corner */
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
   /* keep it at the top of everything else */
   z-index: 100;
   /* hide with opacity */
