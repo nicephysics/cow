@@ -20,9 +20,9 @@ body,h1,h2,h3,h4,h5,h6 {
   width: 48px!important;
   height: 48px!important;
   
-  position: fixed;
-  top: 30px;
-  right: 30px;
+  position: fixed!important;
+  top: 30px!important;
+  right: 30px!important;
 }
 
 .circle-button {
