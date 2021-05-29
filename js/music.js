@@ -12,7 +12,6 @@ function play() {
     button.classList.remove("fa-pause")
     button.classList.add("fa-play")
   }
-  console.log(localStorage.getItem("music_play"))
 }
 
 function checkStorage() {
@@ -30,7 +29,6 @@ function checkStorage() {
     button.classList.remove("fa-pause")
     button.classList.add("fa-play")
   }
-  console.log(localStorage.getItem("music_play"))
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
