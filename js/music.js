@@ -31,6 +31,10 @@ function checkStorage() {
   }
 }
 
+document.addEventListener("load", function(event) {
+  checkStorage()
+})
+
 document.addEventListener("DOMContentLoaded", function(event) {
   checkStorage()
   var button = document.getElementById("music_button")
