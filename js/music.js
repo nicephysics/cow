@@ -31,7 +31,8 @@ function checkStorage() {
   }
 }
 
-document.addEventListener("load", function(event) {
+window.onload = checkStorage
+window.addEventListener("load", function() {
   checkStorage()
 })
 
