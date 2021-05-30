@@ -29,6 +29,7 @@ function checkStorage() {
     button.classList.remove("fa-pause")
     button.classList.add("fa-play")
   }
+  console.log(playing)
 }
 
 // webpage loaded
