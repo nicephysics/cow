@@ -31,8 +31,12 @@ function checkStorage() {
   }
 }
 
-window.onload = checkStorage
+// webpage loaded
 window.addEventListener("load", function() {
+  checkStorage()
+})
+// back/forward buttons
+window.addEventListener("popstate", function() {
   checkStorage()
 })
 
