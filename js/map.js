@@ -24,7 +24,7 @@ function create() {
   popup.classList.add("popup")
   
   button.id = "popup_button"
-  button.setAttribute("class", "fas fa-map-marked-alt button map-button black text-white padding margin-top margin-left large topleft animate-zoom")
+  button.setAttribute("class", "fas fa-map-marked-alt button map-button padding margin-top margin-left large topleft animate-zoom")
   button.innerHTML = `<i class="fas fa-map-marked-alt"></i>`
   
   content.id = "popup_content"
