@@ -5,13 +5,14 @@ function create() {
   var popup = document.createElement("div")
   var content = document.createElement("div")
   var close = document.createElement("span")
+  var map = document.createElement("img")
   var text = document.createElement("p")
   
   popup.id = "popup"
   popup.classList.add("popup")
   
   button.id = "popup_button"
-  button.setAttribute("class", "fas fa-map-marked-alt button map-button padding margin-top margin-left large topleft animate-zoom")
+  button.setAttribute("class", "fas fa-map-marked-alt button map-button padding margin-top margin-left large topleft animate-zoom") // styles
   button.innerHTML = `<i class="fas fa-map-marked-alt"></i>`
   
   content.id = "popup_content"
@@ -22,13 +23,18 @@ function create() {
   close.innerHTML = `&times;`
   
   text.id = "popup_text"
-  text.innerHTML = `Hello World!`  
+  text.innerHTML = `Hello World!`
+  
+  map.id = "popup_map"
+  map.setAttribute("class", "center") // styles
+  map.src = "../../assets/map/map1_15_249161.png"
   
   body.appendChild(button)
   body.appendChild(popup)
   popup.appendChild(content)
   content.appendChild(close)
   content.appendChild(text)
+  content.appendChild(map)
 
   // When the user clicks on the button, open the modal
   button.onclick = function() {
