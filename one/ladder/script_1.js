@@ -4,7 +4,7 @@ function check() {
   let val = answer.value.replace(/\s/g, '')
   let ans = (val === "5.78m" || val === "5.8m" || val === "578cm")
   if (ans) {
-    window.location.href = "https://nicephysics.github.io/cow/one/corn"
+    window.location.href = "../corn"
   } else {
     // wrong!
     fade = function(element, startcolor, endcolor, time_elapsed) {
