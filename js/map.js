@@ -40,7 +40,7 @@ function create() {
   map.id = "popup_map"
   map.setAttribute("class", "center") // styles
   map.src = map_string
-  
+ 
   body.appendChild(button)
   body.appendChild(popup)
   popup.appendChild(content)
@@ -48,6 +48,10 @@ function create() {
   content.appendChild(text)
   content.appendChild(map_link)
   map_link.appendChild(map)
+  
+  // logs
+  console.log(content, content.width, content.height)
+  console.log(map, map.width, map.height)
 
   // When the user clicks on the button, open the modal
   button.onclick = function() {
