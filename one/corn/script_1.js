@@ -4,7 +4,7 @@ function check() {
   let val = answer.value.replace(/\s/g, '')
   let ans = (val === "10.6m/s" || val === "11m/s")
   if (ans) {
-    window.location.href = "https://nicephysics.github.io/moments/end_itsh"
+    window.location.href = "https://nicephysics.github.io/cow/one/end_itsh"
   } else {
     // wrong!
     fade = function(element, startcolor, endcolor, time_elapsed) {
