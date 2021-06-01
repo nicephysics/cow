@@ -38,7 +38,7 @@ function create() {
   map_link.href = map_string
   
   map.id = "popup_map"
-  map.setAttribute("class", "center") // styles
+  map.setAttribute("class", "center image-fit") // styles
   map.src = map_string
  
   body.appendChild(button)
