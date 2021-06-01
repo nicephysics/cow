@@ -4,7 +4,7 @@ function check() {
   let val = answer.value.replace(/\s/g, '')
   let ans = (val === "250")
   if (ans) {
-    window.location.href = "https://nicephysics.github.io/cow/one/cave";
+    window.location.href = "../cave";
   } else {
     // wrong!
     fade = function(element, startcolor, endcolor, time_elapsed) {
