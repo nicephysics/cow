@@ -1,16 +1,3 @@
-/*
-<button id="myBtn">Open Modal</button>
-
-<div id="myModal" class="popup">
-
-  <div class="popup-content">
-    <span class="popup-close">&times;</span>
-    <p>Hi, I am text!</p>
-  </div>
-
-</div>
-*/
-
 function create() {
   // Get the modal
   var body = document.querySelector("body")
