@@ -25,6 +25,8 @@ function create() {
   
   button.id = "popup_button"
   button.classList.add("button")
+  button.classList.add("fas")
+  button.classList.add("fa-map")
   
   content.id = "popup_content"
   content.classList.add("popup-content")
