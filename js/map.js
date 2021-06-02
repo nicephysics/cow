@@ -1,3 +1,34 @@
+// returns the document number
+function get_page_number() {
+  let title = document.title
+  switch(title) {
+    case "The Cave":
+      return 0
+    case "The Ladder":
+      return 1
+    case "The Corn":
+      return 2
+    case "The End":
+      return 3
+    case "The Stream":
+      return 4
+    case "The Dark Room":
+      return 5
+    case "The Maze":
+      return 6
+    case "The Bright Room":
+      return 7
+    case "The Hole in the Wall":
+      return 8
+    case "The Secret Room":
+      return 9
+    case "The Control Room":
+      return 10
+    default:
+      return -1
+  }
+}
+
 // returns a map link
 function get_map_from_number(number) {
   switch (number) {
@@ -10,13 +41,28 @@ function get_map_from_number(number) {
   }
 }
 
+function get_number() {
+  let number = localStorage.get("unlocked")
+  if (number == null || typeof number !== "number") {
+    localStorage.set("unlocked", 0)
+    number = 0
+  }
+  let current = Math.pow(2, get_page_number())
+  if ((number | current) !== number) {
+    number = number | current
+    localStorage.set("unlocked", number)
+  }
+  return number
+}
+
 function get_map() {
-  return get_map_from_number(1)
+  return get_map_from_number(get_number())
 }
 
 function create() {
   // Get the map string
   var map_string = get_map()
+  
   // Get the modal
   var body = document.querySelector("body")
   var button = document.createElement("button")
