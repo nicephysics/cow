@@ -70,6 +70,7 @@ function hint1() {
     
     document.getElementById("footer").appendChild(p)
     document.getElementById("footer").appendChild(image)
+    document.getElementById("footer").appendChild(p2)
   }
 }
 
