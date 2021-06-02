@@ -48,15 +48,15 @@ function get_map_from_number(number) {
 }
 
 function get_number() {
-  let number = localStorage.get("unlocked")
+  let number = localStorage.getItem("unlocked")
   if (number == null || typeof number !== "number") {
-    localStorage.set("unlocked", 0)
+    localStorage.setItem("unlocked", 0)
     number = 0
   }
   let current = Math.pow(2, get_page_number())
   if ((number | current) !== number) {
     number = number | current
-    localStorage.set("unlocked", number)
+    localStorage.setItem("unlocked", number)
   }
   return number
 }
