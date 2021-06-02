@@ -64,8 +64,10 @@ function get_number() {
 function get_binary_percent(number) {
   let ones = 3
   let total = 14
-  for (let c of number.toString(2)) {
-    if (c === '1') {
+  let str = number.toString(2)
+  var i = str.length;
+  while (i--) {
+    if (str.charAt(i) === '1') {
       ones++
     }
   }
