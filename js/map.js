@@ -110,7 +110,7 @@ function create() {
   
   text.id = "popup_text"
   text.setAttribute("class", "center")
-  text.innerHTML = `You have completed ` + Math.floor(get_binary_percent(map_number)) + ` of the puzzle, including secrets!`
+  text.innerHTML = `You have completed ` + Math.floor(get_binary_percent(map_number)) + `% of the puzzle, including secrets!`
   
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center image-fit") // styles
