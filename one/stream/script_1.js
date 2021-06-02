@@ -49,12 +49,27 @@ answer.addEventListener("keyup", function(event) {
 
 function hint1() {
   var button = document.getElementById("button_hint_1")
-  if (document.getElementById("text_hint_1") == null) {
+  if (document.getElementById("text_hint_1_1") == null) {
     var p = document.createElement("p")
-    p.classList.add("padding-8")
-    p.id = "text_hint_1"
-    p.innerHTML = "Clarification: the \"combined density\" referred to in the question is the <i>apparent</i> density of the corn that has the mass of both the corn and the cow."
+    var image = document.createElement("img")
+    var p2 = document.createElement("p")
+    
+    p.id = "text_hint_1_1"
+    p.classList.add("padding-16")
+    p.innerHTML =
+      "Clarification: the \"combined density\" referred to in the question is the <i>apparent</i> density of the corn that has the mass of both the corn and the cow."
+    
+    image.id = "text_image_1"
+    image.setAttribute("class", "center padding-16")
+    image.src = "../../assets/stream_hint.png"
+    
+    p2.id = "text_hint_1_2"
+    p2.classList.add("padding-16")
+    p2.innerHTML =
+      "This image is sponsored by Microsoft Paint. Download the best drawing software <a href='https://archive.org/details/mspaint_xp_version'>here</a>!"
+    
     document.getElementById("footer").appendChild(p)
+    document.getElementById("footer").appendChild(image)
   }
 }
 
@@ -62,7 +77,7 @@ function hint2() {
   var button = document.getElementById("button_hint_2")
   if (document.getElementById("text_hint_2") == null) {
     var p = document.createElement("p")
-    p.classList.add("padding-8")
+    p.classList.add("padding-16")
     p.id = "text_hint_2"
     p.innerHTML = "Hint: Add together the two masses and divide by the volume of the corn!<br>Remember density = mass / volume, and in this case, the cow is not touching the water."
     document.getElementById("footer").appendChild(p)
