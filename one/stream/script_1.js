@@ -72,10 +72,7 @@ function hint1() {
     document.getElementById("footer").appendChild(image)
     document.getElementById("footer").appendChild(p2)
     
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    (document.scrollingElement || document.documentElement || document.body).scrollTop = scrollingElement.scrollHeight
   }
 }
 
@@ -87,9 +84,6 @@ function hint2() {
     p.id = "text_hint_2"
     p.innerHTML = "Hint: Add together the two masses and divide by the volume of the corn!<br>Remember density = mass / volume, and in this case, the cow is not touching the water."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    (document.scrollingElement || document.documentElement || document.body).scrollTop = scrollingElement.scrollHeight
   }
 }
