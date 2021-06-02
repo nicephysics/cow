@@ -1,5 +1,5 @@
 window.addEventListener("load",  function() {
-  if (localStorage.getItem("number") >= 31) {
+  if (localStorage.getItem("unlocked") >= 31) {
     location.href = "../stream"
   }
 })
