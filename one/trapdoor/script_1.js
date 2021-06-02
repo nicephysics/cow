@@ -55,5 +55,9 @@ function hint1() {
     p.id = "text_hint_1"
     p.innerHTML = "Hint: Use the concept of moment of a force about a pivot."
     document.getElementById("footer").appendChild(p)
+    document.documentElement.scrollTo({
+      bottom: 0,
+      behavior: "smooth"
+    })
   }
 }
