@@ -132,18 +132,20 @@ function create() {
 
   // When the user clicks on the button, open the modal
   button.onclick = function() {
-    popup.style.display = "block";
+    // popup.style.display = "block"
+    popup.classList.add("show")
   }
 
   // When the user clicks on <span> (x), close the modal
   close.onclick = function() {
-    popup.style.display = "none";
+    // popup.style.display = "none"
+    popup.classList.remove("show")
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == popup) {
-      popup.style.display = "none";
+      popup.style.display = "none"
     }
   }
   
