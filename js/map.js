@@ -61,13 +61,21 @@ function get_number() {
   return number
 }
 
-function get_map() {
-  return get_map_from_number(get_number())
+function get_binary_percent(number) {
+  let ones = 0
+  let total = 11
+  for (let c of number.toString(2)) {
+    if (c === '1') {
+      ones++
+    }
+  }
+  return ones / total * 100
 }
 
 function create() {
   // Get the map string
-  var map_string = get_map()
+  var map_number = get_number()
+  var map_string = get_map_from_number(map_number)
   
   // Get the modal
   var body = document.querySelector("body")
@@ -99,14 +107,15 @@ function create() {
   close.innerHTML = `&times;`
   
   text.id = "popup_text"
-  text.innerHTML = `Hello World!`
+  text.setAttribute("class", "center")
+  text.innerHTML = `You have completed ` + Math.floor(get_binary_percent(map_number)) + ` of the puzzle, including secrets!`
   
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center image-fit") // styles
   map_link.href = map_string
   
   map.id = "popup_map"
-  // map.setAttribute("class", "center image-fit")
+  map.setAttribute("class", "center image-fit") // is this needed?
   map.src = map_string
  
   body.appendChild(button)
