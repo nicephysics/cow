@@ -105,7 +105,7 @@ function create() {
   let text_string = `You have completed ` + text_num_1 + `% of the main puzzle...`
   if (text_num_1 === 100) {
     let text_num_2 = Math.floor((count_binary(map_number) - 4) / 7 * 100)
-    text_string += `<br>and ` + text_num_2 + `% of the whole puzzle.`
+    text_string += `<br>and ` + text_num_2 + `% of the secret puzzle.`
   }
   text.innerHTML = text_string
   
