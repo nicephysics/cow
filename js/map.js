@@ -99,13 +99,13 @@ function create() {
   map_icon.src = "../../assets/map/map_cave_icon.png"
   
   popup.id = "popup"
-  popup.classList.add("popup")
+  popup.setAttribute("class", "popup")
   
   content.id = "popup_content"
-  content.classList.add("popup-content")
+  content.setAttribute("class", "popup-content")
   
   close.id = "popup_close"
-  close.classList.add("popup-close")
+  close.setAttribute("class", "popup-close")
   close.innerHTML = `&times;`
   
   text.id = "popup_text"
