@@ -66,7 +66,7 @@ function hint1() {
     p2.id = "text_hint_1_2"
     p2.classList.add("padding-16")
     p2.innerHTML =
-      "This image is sponsored by Microsoft Paint. Download the best drawing software <a href='https://archive.org/details/mspaint_xp_version'>here</a>!"
+      "This image is sponsored by Microsoft Paint. Download the best drawing software <a href='../../assets/paint_xp.png'>here</a>!"
     
     document.getElementById("footer").appendChild(p)
     document.getElementById("footer").appendChild(image)
