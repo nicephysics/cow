@@ -37,8 +37,9 @@ function get_map_from_number(number) {
 
 function get_number() {
   let number = localStorage.getItem("unlocked")
-  console.log(number)
-  if (number == null || typeof number !== "number") {
+  if (number != null) {
+    number = parseInt(number)
+  } else {
     localStorage.setItem("unlocked", 0)
     number = 0
   }
