@@ -178,6 +178,8 @@ body, h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  /* added */
+  box-shadow: 0px 0px 20px grey;
 }
 
 /* Pop-up box's close button */
