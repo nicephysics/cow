@@ -36,8 +36,14 @@ function get_map_from_number(number) {
       return "../../assets/cow.png"
     case 1:
       return "../../assets/map/map1_1_18889.png"
+    case 3:
+      return "../../assets/map/map1_3_51785.png"
+    case 7:
+      return "../../assets/map/map1_7_117577.png"
     case 15:
       return "../../assets/map/map1_15_249161.png"
+    case 31:
+      return "../../assets/map/map1_31_512329.png"
   }
 }
 
