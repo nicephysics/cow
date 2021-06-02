@@ -66,11 +66,16 @@ function hint1() {
     p2.id = "text_hint_1_2"
     p2.classList.add("padding-16")
     p2.innerHTML =
-      "This image is sponsored by Microsoft Paint. Download the best drawing software <a href='../../assets/paint_xp.png'>here</a>!"
+      "This image is made using Microsoft Paint. Download the best paint software <a href='../../assets/paint_xp.png'>here</a>!"
     
     document.getElementById("footer").appendChild(p)
     document.getElementById("footer").appendChild(image)
     document.getElementById("footer").appendChild(p2)
+    
+    document.documentElement.scrollTo({
+      bottom: 0,
+      behavior: "smooth"
+    })
   }
 }
 
@@ -82,5 +87,9 @@ function hint2() {
     p.id = "text_hint_2"
     p.innerHTML = "Hint: Add together the two masses and divide by the volume of the corn!<br>Remember density = mass / volume, and in this case, the cow is not touching the water."
     document.getElementById("footer").appendChild(p)
+    document.documentElement.scrollTo({
+      bottom: 0,
+      behavior: "smooth"
+    })
   }
 }
