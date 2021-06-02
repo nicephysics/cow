@@ -1,6 +1,17 @@
 // returns a map link
+function get_map_from_number(number) {
+  switch (number) {
+    case 0:
+      return "../../assets/cow.png"
+    case 1:
+      return "../../assets/map/map1_1_18889.png"
+    case 15:
+      return "../../assets/map/map1_15_249161.png"
+  }
+}
+
 function get_map() {
-  return "../../assets/map/map1_15_249161.png"
+  return get_map_from_number(1)
 }
 
 function create() {
@@ -9,6 +20,7 @@ function create() {
   // Get the modal
   var body = document.querySelector("body")
   var button = document.createElement("button")
+  var map_icon = document.createElement("img")
   var popup = document.createElement("div")
   var content = document.createElement("div")
   var close = document.createElement("span")
@@ -16,12 +28,16 @@ function create() {
   var map = document.createElement("img")
   var text = document.createElement("p")
   
-  popup.id = "popup"
-  popup.classList.add("popup")
-  
   button.id = "popup_button"
   button.setAttribute("class", "fas fa-map-marked-alt button map-button padding margin-top margin-left large topleft animate-zoom") // styles
   button.innerHTML = `<i class="fas fa-map-marked-alt"></i>`
+  
+  map_icon.id = "popup_button_icon"
+  map_icon.setAttribute("class", "center image-fit")
+  map_icon.src = "../../assets/map/map_cave_icon.png"
+  
+  popup.id = "popup"
+  popup.classList.add("popup")
   
   content.id = "popup_content"
   content.classList.add("popup-content")
@@ -43,6 +59,7 @@ function create() {
  
   body.appendChild(button)
   body.appendChild(popup)
+  button.appendChild(map_icon)
   popup.appendChild(content)
   content.appendChild(close)
   content.appendChild(text)
