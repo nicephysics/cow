@@ -178,7 +178,7 @@ body, h1, h2, h3, h4, h5, h6 {
 /* pop-up content */
 .popup-content {
   background-color: #fefefe;
-  margin: 5% auto 5% auto; /* 5% from the top and bottom, centered */
+  margin: auto auto; /* fully centered hopefully */
   /* was 15% though */
   padding: 20px;
   border: 1px solid #888;
