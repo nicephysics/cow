@@ -31,20 +31,8 @@ function get_page_number() {
 
 // returns a map link
 function get_map_from_number(number) {
-  switch (number) {
-    case 0:
-      return "../../assets/cow.png"
-    case 1:
-      return "../../assets/map/map1_1_18889.png"
-    case 3:
-      return "../../assets/map/map1_3_51785.png"
-    case 7:
-      return "../../assets/map/map1_7_117577.png"
-    case 15:
-      return "../../assets/map/map1_15_249161.png"
-    case 31:
-      return "../../assets/map/map1_31_512329.png"
-  }
+  let second = number * 16448 + 2441
+  return "../../assets/map/map1_" + number + "_" + second + ".png"
 }
 
 function get_number() {
