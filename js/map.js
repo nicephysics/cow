@@ -70,6 +70,8 @@ function create() {
   var map_number = get_number()
   var map_string = get_map_from_number(map_number)
   
+  if (map_number === 0) { return }
+  
   // Get the modal
   var body = document.querySelector("body")
   var button = document.createElement("button")
