@@ -37,15 +37,18 @@ function get_map_from_number(number) {
 
 function get_number() {
   let number = localStorage.getItem("unlocked")
+  console.log(number)
   if (number == null || typeof number !== "number") {
     localStorage.setItem("unlocked", 0)
     number = 0
   }
   let current = Math.pow(2, get_page_number())
+  console.log(current, number)
   if ((number | current) !== number) {
     number = number | current
     localStorage.setItem("unlocked", number)
   }
+  console.log(number)
   return number
 }
 
