@@ -55,6 +55,7 @@ function get_number() {
 
 function count_binary(number) {
   let ones = 0
+  let str = number.toString(2)
   var i = str.length;
   while (i--) {
     if (str.charAt(i) === '1') {
