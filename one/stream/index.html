@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Stream</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../../assets/icon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../assets/icon_16.png" sizes="16x16" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- template time -->
+    <link rel="stylesheet" href="https://nicephysics.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my template -->
+    <link rel="stylesheet" href="../../main.css">
+    <script src="../../js/main.js"></script>
+    <script src="../../js/map.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXEP243M4F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZXEP243M4F');
+    </script>
+  </head>
+  
+  <body>
+
+    <!-- header -->
+    <header class="container red center" class="padding-gigantic">
+      <h1 class="margin gigantic">
+        The Stream
+      </h1>
+    </header>
+    <!-- end of header -->
+
+    <!-- image -->
+    <div class="row-padding padding-64 container center">
+      <div class="content">
+        <img src="../../assets/stream_1.jpg" alt="stream in a cave with a small crevice" width="675" height="450" class="transparent">
+        </img>
+      </div>
+    </div>
+
+    <!-- first grid -->
+    <div class="row-padding light-grey padding-32 container">
+      <div class="content">
+        <h5 class="padding-32">
+          “Crack!”
+          You jump, as you hear a noise amongst the pin-drop silence.
+          You look to the left and notice a small crevice in the biggest of the many small lakes in your vision.
+          Wow, you never noticed this before! It seems to be a small cave stream.
+          You ignore the noise (a thud echoes in the distance) as you strain your eyes, finding a way to enter the stream.
+          The hole seems just wide enough for a small-sized cow like you...
+        </h5>
+        <h5 class="padding-8">
+          Suddenly, you spot a huge juicy cob of corn around 15 metres away.
+          Why is it there, you wonder.
+          Walking to it, you try to pick it up using two of your feet and promptly drop it in the water (you aren’t so nimble after all).
+          It bloops up and down on the clear water, its many kernels glittering in the dark.
+          Maybe if the corn floats on water... you could use it as a raft?
+        </h5>
+        <h5 class="padding-32">
+          The corn felt around 400 g when you picked it up earlier, and you know it occupies a volume similar to all of your stomachs (40 L).
+          You wonder if it was really really real.
+          Can the corn support you if you stand on it?
+        </h5>
+      </div>
+    </div>
+
+    <!-- second grid -->
+    <div class="container black opacity center padding-32">
+      <h4>
+        Provide the density of you and the corn combined, assuming no part of you touches the water, in kg/m³. (Round your answer to 3 s.f.)
+      </h4>
+      <h6>
+        (Remember not to include units this time!)
+      </h6>
+    </div>
+
+    <!-- third grid -->
+    <div class="row-padding light-grey padding-32 container">
+      
+      <div class="content">
+        <div id="wrapper" class="padding-32 center" style="background-color:#4CAF50">
+          <input id="answer" type="text" placeholder="Enter density..." maxlength="10" class="vertical-center">
+            <!-- input -->
+          </input>
+          <button id="button" class="fa fa-play button black large vertical-center" onclick="check()">
+            <!-- fa-play -->
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" class="container padding-32 center opacity">
+      <p class="padding-16">
+        Important (but optional) clarification and diagram below!
+      </p>
+      <button id="button_hint_1" class="button black large vertical-center" onclick="hint1()">
+        Clarification
+      </button>
+      <button id="button_hint_2" class="button black large vertical-center" onclick="hint2()">
+        Hint
+      </button>
+    </footer>
+
+    <!-- cow.js -->
+    <script src="../../js/cow.js"></script>
+    <script>
+      init_cow("../../assets/cow_moo.wav")
+    </script>
+
+    <script src="./script_1.js"></script>
+
+    <!-- js
+    <script>
+      // hee hee hee you cannot read me
+      // please don't try to cheat
+      // thank you
+    </script>
+    -->
+  
+    <!-- music -->
+    <audio id="music" hidden loop>
+      <source src="../../assets/stream_music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="music_button" class="fa fa-play button music-circle-button black padding margin-top margin-right large topright animate-zoom" onclick="play()"></button>
+    <script src="../../js/music.js"></script>
+    <script>
+      document.getElementById("music").volume = 1.0
+    </script>
+    
+    <!-- end of body -->
+  </body>
+</html>
