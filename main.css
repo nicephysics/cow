@@ -61,6 +61,10 @@ body, h1, h2, h3, h4, h5, h6 {
   color:#ff9800!important;
   background-color:#ff9800!important;
   text-color:#000000!important;
+  
+  position: fixed!important;
+  top: 15px!important;
+  left: 15px!important;
 }
 
 .scroll-to-top {
