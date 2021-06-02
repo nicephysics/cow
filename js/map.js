@@ -101,14 +101,11 @@ function create() {
   
   text.id = "popup_text"
   text.setAttribute("class", "center")
-  let text_string = `You have completed `
-    + Math.floor((3 + count_binary(map_number)) / 7 * 100)
-    + `% of the main puzzle...`
-  if (map_number > 31) {
-    text_string += ""
-      + `<br>and `
-      + Math.floor((3 + count_binary(map_number)) / 14 * 100)
-      + `% of the whole puzzle.`
+  let text_num_1 = Math.floor((3 + count_binary(map_number)) / 7 * 100)
+  let text_string = `You have completed ` + text_num_1 + `% of the main puzzle...`
+  if (text_num_1 === 100) {
+    let text_num_2 = Math.floor((count_binary(map_number) - 4) / 7 * 100)
+    text_string += `<br>and ` + text_num_2 + `% of the whole puzzle.`
   }
   text.innerHTML = text_string
   
