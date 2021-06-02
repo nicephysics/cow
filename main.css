@@ -165,6 +165,7 @@ body, h1, h2, h3, h4, h5, h6 {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   /* overflow: auto; Enable scroll if needed */
+  overflow: hidden;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -172,7 +173,8 @@ body, h1, h2, h3, h4, h5, h6 {
 /* pop-up content */
 .popup-content {
   background-color: #fefefe;
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 5% from the top and centered */
+  /* was 15% though */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
