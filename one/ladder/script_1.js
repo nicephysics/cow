@@ -47,6 +47,11 @@ answer.addEventListener("keyup", function(event) {
   }
 })
 
+function scroll_to_bottom() {
+  let e = (document.scrollingElement || document.documentElement || document.body)
+  e.scrollTop = e.scrollHeight
+}
+
 function hint1() {
   var button = document.getElementById("button_hint_1")
   if (document.getElementById("text_hint_1") == null) {
@@ -55,10 +60,7 @@ function hint1() {
     p.id = "text_hint_1"
     p.innerHTML = "Hint 1: Draw a diagram and include all the forces acting on the ladder."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    scroll_to_bottom()
   }
 }
 
@@ -70,10 +72,7 @@ function hint2() {
     p.id = "text_hint_2"
     p.innerHTML = "Hint 2: There are two forces acting on the ladder by the ground! Don't forget the weight of the ladder."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    scroll_to_bottom()
   }
 }
 
@@ -85,10 +84,7 @@ function hint3() {
     p.id = "text_hint_3"
     p.innerHTML = "Hint 3: Use Fnet = 0 (upward forces = downward forces) to find the normal force on the ladder by the ground."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    scroll_to_bottom()
   }
 }
 
@@ -100,10 +96,7 @@ function hint4() {
     p.id = "text_hint_4"
     p.innerHTML = "Hint 4: Take moments about the pivot at the top of the ladder, because you don't know the normal force by the wall on the ladder."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    scroll_to_bottom()
   }
 }
 
@@ -115,9 +108,6 @@ function hint5() {
     p.id = "text_hint_5"
     p.innerHTML = "Hint 5: Use the principle of moments to calculate the answer! Remember that the distance required is the distance from the bottom of the ladder."
     document.getElementById("footer").appendChild(p)
-    document.documentElement.scrollTo({
-      bottom: 0,
-      behavior: "smooth"
-    })
+    scroll_to_bottom()
   }
 }
