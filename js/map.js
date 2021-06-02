@@ -53,17 +53,15 @@ function get_number() {
   return number
 }
 
-function get_binary_percent(number) {
-  let ones = 3
-  let total = 14
-  let str = number.toString(2)
+function count_binary(number) {
+  let ones = 0
   var i = str.length;
   while (i--) {
     if (str.charAt(i) === '1') {
       ones++
     }
   }
-  return ones / total * 100
+  return ones
 }
 
 function create() {
@@ -102,7 +100,16 @@ function create() {
   
   text.id = "popup_text"
   text.setAttribute("class", "center")
-  text.innerHTML = `You have completed ` + Math.floor(get_binary_percent(map_number)) + `% of the puzzle, including secrets!`
+  let text_string = `You have completed `
+    + Math.floor((3 + count_binary(map_number)) / 7)
+    + `% of the main puzzle...`
+  if (map_number > 31) {
+    text_string += ""
+      + `<br>and `
+      + Math.floor((3 + count_binary(map_number)) / 14)
+      + `% of the whole puzzle.`
+  }
+  text.innerHTML = text_string
   
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center image-fit") // styles
