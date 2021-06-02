@@ -90,7 +90,7 @@ function create() {
   popup.setAttribute("class", "popup")
   
   content.id = "popup_content"
-  content.setAttribute("class", "popup-content")
+  content.setAttribute("class", "popup-content center")
   
   close.id = "popup_close"
   close.setAttribute("class", "popup-close")
