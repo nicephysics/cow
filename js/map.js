@@ -65,6 +65,20 @@ function count_binary(number) {
   return ones
 }
 
+function image_click(image, event) {
+  bounds = image.getBoundingClientRect()
+  let left = bounds.left
+  let top = bounds.top
+  let x = event.pageX - left - window.scrollX
+  let y = event.pageY - top - window.scrollY
+  let cw = this.clientWidth
+  let ch = this.clientHeight
+  let iw = this.naturalWidth
+  let ih = this.naturalHeight
+  let px = x / cw * iw
+  let py = y / ch * ih 
+}
+
 function create() {
   // Get the map string
   var map_number = get_number()
@@ -118,6 +132,9 @@ function create() {
   map.id = "popup_map"
   map.setAttribute("class", "center image-fit") // is this needed?
   map.src = map_string
+  map.addEventListener("click", function(event) {
+    image_click(this, event)
+  })
  
   body.appendChild(button)
   body.appendChild(popup)
