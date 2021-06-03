@@ -67,16 +67,27 @@ function count_binary(number) {
 
 function image_click(image, event) {
   bounds = image.getBoundingClientRect()
-  let left = bounds.left
-  let top = bounds.top
-  let x = event.pageX - left - window.scrollX
-  let y = event.pageY - top - window.scrollY
+  let left = bounds.left + window.scrollX
+  let top = bounds.top + window.scrollY
+  let x = event.pageX - left
+  let y = event.pageY - top
   let cw = this.clientWidth
   let ch = this.clientHeight
   let iw = this.naturalWidth
   let ih = this.naturalHeight
   let px = x / cw * iw
-  let py = y / ch * ih 
+  let py = y / ch * ih
+  // return a long, long object
+  return {
+    x: px / cw,
+    y: py / ch,
+    px: px,
+    py: py,
+    w: cw,
+    h: ch,
+    left: left,
+    top: top,
+  }
 }
 
 function create() {
@@ -133,7 +144,8 @@ function create() {
   map.setAttribute("class", "center image-fit") // is this needed?
   map.src = map_string
   map.addEventListener("click", function(event) {
-    image_click(this, event)
+    var e = image_click(this, event)
+    // check e.x and e.y here!!!
   })
  
   body.appendChild(button)
