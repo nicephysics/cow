@@ -36,18 +36,18 @@ function get_map_from_number(number) {
 }
 
 function get_number() {
-  let number = localStorage.getItem("unlocked")
+  let number = localStorage.getItem("unlocked_1")
   if (number != null) {
     number = parseInt(number)
   } else {
-    localStorage.setItem("unlocked", 0)
+    localStorage.setItem("unlocked_1", 0)
     number = 0
   }
   let current = Math.pow(2, get_page_number())
   console.log(current, number)
   if ((number | current) !== number) {
     number = number | current
-    localStorage.setItem("unlocked", number)
+    localStorage.setItem("unlocked_1", number)
   }
   console.log(number)
   return number
