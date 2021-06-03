@@ -1,1 +1,1 @@
-localStorage.setItem("unlocked", 0)
+localStorage.setItem("unlocked_1", 0)
