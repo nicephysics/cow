@@ -115,6 +115,15 @@ body, h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
+.checkbox-large {
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
 
 
 
