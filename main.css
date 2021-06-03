@@ -28,7 +28,7 @@ body, h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 .image-center-fit {
-    max-width: 100%;
+    max-width: 70%;
     max-height: 100vh;
     margin: auto;
 }
