@@ -7,8 +7,8 @@ document.getElementById("checkbox_debug_map").addEventListener("change", functio
 })
 document.getElementById("checkbox_play_music").addEventListener("change", function() {
   if (this.checked) {
-    localStorage.setItem("play_music", "true")
+    localStorage.setItem("music_play", "true")
   } else {
-    localStorage.setItem("play_music", "false")
+    localStorage.setItem("music_play", "false")
   }
 })
