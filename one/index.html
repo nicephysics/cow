@@ -135,13 +135,15 @@
           </p>
         </div>
         <script>
-          document.getElementById("checkbox_play_music").addEventListener("change", function() {
+          var checkbox = document.getElementById("checkbox_play_music")
+          checkbox.addEventListener("change", function() {
             if (this.checked) {
               localStorage.setItem("music_play", "true")
             } else {
               localStorage.setItem("music_play", "false")
             }
           })
+          checkbox.checked = (localStorage.getItem("music_play") === "true")
         </script>
       </div>
     </div>
