@@ -264,7 +264,7 @@ function create() {
   })
   
   hint.id = "popup_hint"
-  hint.setAttribute("class", "button red padding medium map-hint")
+  hint.setAttribute("class", "red padding medium map-hint")
   hint.innerHTML = ""
   hint.style.display = "none"
   /*
