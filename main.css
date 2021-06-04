@@ -20,7 +20,7 @@ body, h1, h2, h3, h4, h5, h6 {
   max-height: 100%!important;
   height: auto;
   width: 100%!important;
-  object-fit: contain!important;
+  object-fit: cover!important;
 }
 
 .image-container {
