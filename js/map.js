@@ -155,7 +155,7 @@ function map_hover(map, map_link, hint, e, event) {
     }
     if (hit) {
       done = true
-      hint.innerHTML = `<i class="fas fa-link regular"></i>${box.label}`
+      hint.innerHTML = `<i class="fa fa-link regular"></i>${box.label}`
       /*
       map_link.href = box.link
       map_link.style.cursor = box.cursor
