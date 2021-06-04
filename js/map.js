@@ -23,7 +23,7 @@ var boxes = [
     cursor: "pointer",
   }, {
     boxes: [
-      { left: 0.87, top: 0.26, right: 0.8778809664542215, bottom: 0.26102655970917316, },
+      { left: 0.5507395835852844, top: 0.08444663405861554, right: 0.8778809664542215, bottom: 0.26102655970917316, },
     ],
     requirement: two(1),
     label: "The Ladder",
