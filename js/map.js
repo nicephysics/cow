@@ -119,8 +119,6 @@ function image_position(image, event) {
 }
 
 function map_hover(map, map_link, hint, e, event) {
-  function show_hint() { hint.style.display = "block" }
-  function hide_hint() { hint.style.display = "none" }
   var done = false
   for (let box of boxes) {
     var hit = false
@@ -138,7 +136,7 @@ function map_hover(map, map_link, hint, e, event) {
       break
     }
   }
-  if (done && map_hovering) {
+  if (done) {
     // no no this is not jquery
     if (event.pageX != null) {
       let rect = hint.getBoundingClientRect()
@@ -148,11 +146,9 @@ function map_hover(map, map_link, hint, e, event) {
       hint.style.left = `${x}px`
       console.log(hint.style.top, hint.style.left)
     }
-    show_hint()
   } else {
     map_link.href = ""
-    map_link.style.cursor = "default"    
-    hide_hint()
+    map_link.style.cursor = "default"
   }
   if (localStorage.getItem("debug_map") === "true") {
     var debug_text = document.getElementById("map_debug_text")
@@ -216,9 +212,11 @@ function create() {
   map.src = map_string
   map.addEventListener("mouseenter", function(event) {
     map_hovering = true
+    hint.style.display = "block"
   })
   map.addEventListener("mouseleave", function(event) {
     map_hovering = false
+    hint.style.display = "none"
   })
   map.addEventListener("mousemove", function(event) {
     var e = image_position(this, event)
