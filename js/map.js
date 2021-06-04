@@ -1,12 +1,16 @@
 // "hitboxes"
 var boxes = [
   {
-    top: 0.8914031, left: 0.4285204, bottom: 0.9841766, right: 0.59548000,
+    boxes: [
+      { left: 0.8914031, top: 0.4285204, right: 0.9841766, bottom: 0.59548000, },
+    ],
     label: "The Trapdoor",
     link: "../trapdoor",
     cursor: "pointer",
   }, {
-    top: 0, left: 0, bottom: 0, right: 0,
+    boxes: [
+      { left: 0, top: 0, right: 0, bottom: 0, },
+    ],
     label: "The Cave",
     link: "../cave",
     cursor: "pointer",
@@ -117,7 +121,13 @@ function map_hover(map, map_link, hint, e) {
   function hide_hint() { hint.style.display = "none" }
   let done = false
   for (let box of boxes) {
-    if (e.x > box.left && e.y < box.top && e.x < box.right && e.y < box.bottom) {
+    let hit = false
+    for (let b of box.boxes) {
+      if (e.x > b.left && e.y < b.top && e.x < b.right && e.y < b.bottom) {
+        hit = true
+      }
+    }
+    if (hit) {
       done = true
       hint.innerHTML = box.label
       map_link.href = box.link
@@ -204,7 +214,7 @@ function create() {
   })
   
   hint.id = "popup_hint"
-  hint.setAttribute("class", "button red padding medium hint")
+  hint.setAttribute("class", "button red padding medium map-hint")
   hint.innerHTML = ""
   hint.style.display = "none"
   hint.addEventListener("mousemove", function(event) {
