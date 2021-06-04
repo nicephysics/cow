@@ -124,7 +124,6 @@ function map_hover(map, map_link, hint, e) {
     var hit = false
     for (let b of box.boxes) {
       if (e.x > b.left && e.y > b.top && e.x < b.right && e.y < b.bottom) {
-        console.log(box.label)
         hit = true
       }
     }
@@ -133,13 +132,13 @@ function map_hover(map, map_link, hint, e) {
       hint.innerHTML = box.label
       map_link.href = box.link
       map_link.style.cursor = box.cursor
-      console.log(box.link)
     }
   }
   if (done && map_hovering) {
     // no no this is not jquery
     hint.style.top = `${map.offsetTop + e.py - 25}px`
     hint.style.left = `${map.offsetLeft + e.px - 25}px`
+    console.log(hint.style.top, hint.style.left)
     show_hint()
   } else {
     map_link.href = "./"
