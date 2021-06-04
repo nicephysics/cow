@@ -13,7 +13,7 @@ var boxes = [
   },
 ]
 
-var map_hover = false
+var map_hovering = false
 
 
 // returns the document number
@@ -97,12 +97,14 @@ function image_position(image, event) {
   let py = y / ch * ih
   // a long, long object
   let obj = {
-    x: px / cw,
-    y: py / ch,
+    x: px / iw,
+    y: py / ih,
     px: px,
     py: py,
-    w: cw,
-    h: ch,
+    cw: cw,
+    ch: ch,
+    iw: iw,
+    ih: ih,
     left: left,
     top: top,
   }
@@ -122,7 +124,7 @@ function map_hover(map, map_link, hint, e) {
       map_link.style.cursor = box.cursor
     }
   }
-  if (done) {
+  if (done && map_hovering) {
     // no no this is not jquery
     hint.style.top = `${map.offsetTop + e.py - 25}px`
     hint.style.left = `${map.offsetLeft + e.px - 25}px`
@@ -190,10 +192,10 @@ function create() {
   map.setAttribute("class", "center image-fit") // is this needed?
   map.src = map_string
   map.addEventListener("mouseenter", function(event) {
-    map_hover = true
+    map_hovering = true
   })
   map.addEventListener("mouseleave", function(event) {
-    map_hover = false
+    map_hovering = false
   })
   map.addEventListener("mousemove", function(event) {
     var e = image_position(this, event)
