@@ -138,9 +138,9 @@ function map_hover(map, map_link, hint, e, event) {
   }
   if (done && map_hovering) {
     // no no this is not jquery
-    if (event.clientX != null) {
-      hint.style.top = `${event.clientY}px`
-      hint.style.left = `${event.clientX}px`
+    if (event.pageX != null) {
+      hint.style.top = `${event.pageY}px`
+      hint.style.left = `${event.pageX}px`
       console.log(hint.style.top, hint.style.left)
     }
     show_hint()
