@@ -204,11 +204,12 @@ function create() {
   text.innerHTML = text_string
   
   map_link.id = "popup_map_link"
-  map_link.setAttribute("class", "center image-fit") // styles
+  map_link.setAttribute("class", "center") // classes (removed image-fit)
+  map_link.setAttribute("style", "height: 100%; width: auto;") // styling direct
   
   map.id = "popup_map"
   // map.setAttribute("class", "center image-fit") // is this needed?
-  map.setAttribute("style", "max-width: 100%; max-height: 100%; height: auto;")
+  map.setAttribute("style", "height: 100%; width: auto;") // styling direct again
   map.src = map_string
   map.addEventListener("mouseenter", function(event) {
     map_hovering = true
