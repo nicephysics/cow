@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Debug
+    </title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/icon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/icon_16.png" sizes="16x16" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- template time -->
+    <link rel="stylesheet" href="https://nicephysics.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my template -->
+    <link rel="stylesheet" href="../main.css">
+    <script src="../js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXEP243M4F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZXEP243M4F');
+    </script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="container red center" class="padding-gigantic">
+      <h1 class="margin gigantic">
+        Debugging Settings
+      </h1>
+    </header>
+    <!-- end of header -->
+
+    <!-- image -->
+    <div class="row-padding padding-64 container center">
+      <div class="content">
+        <img src="../assets/settings.png" alt="settings icon" width="300" height="157" class="transparent">
+        </img>
+      </div>
+    </div>
+
+    <!-- grid 1 -->
+    <div class="row-padding light-grey padding-32 container">
+      <div class="content">
+        <!-- checkbox 1 -->
+        <div class="center padding-none margin-top checkbox-large">
+          <input type="checkbox" id="checkbox_debug_map" name="checkbox_debug_map" value="debug-map" class="checkbox-middle">
+          <label for="checkbox_debug_map">
+            Show coordinates on the map
+          </label>
+        </div>
+        <!-- checkbox 2 -->
+        <div class="center padding-none margin-top checkbox-large">
+          <input type="checkbox" id="checkbox_play_music" name="checkbox_play_music" value="play-music" class="checkbox-middle">
+          <label for="checkbox_play_music">
+            Play music...
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="container dark-grey center padding-64">
+      <button onclick="location.href='https://www.google.com/search?q=cow&tbm=isch'" class="button red padding-large margin-top large">
+        More cows!
+      </button>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" class="container padding-64 center opacity">
+      <p>
+        Why are you here? This page was created by the creator.
+      </p>
+    </footer>
+  
+    <!-- music -->
+    <audio id="music" hidden loop>
+      <source src="../assets/gears.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="music_button" class="fa fa-play button music-circle-button black padding margin-top margin-right large topright animate-zoom" onclick="play()"></button>
+    <script src="../js/music.js"></script>
+    <script>
+      document.getElementById("music").volume = 0.4
+    </script>
+ 
+    <script src="./debug.js"></script>
+    
+    <!-- end of body -->
+  </body>
+</html>
