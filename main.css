@@ -132,6 +132,7 @@ body, h1, h2, h3, h4, h5, h6 {
   display: none;
   z-index: 1001;
   will-change: left, top;
+  transition: 0s;
   -ms-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
