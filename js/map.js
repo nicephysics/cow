@@ -237,8 +237,8 @@ function create() {
   content.appendChild(close)
   content.appendChild(text)
   content.appendChild(map_link)
+  content.appendChild(hint)
   map_link.appendChild(map)
-  map_link.appendChild(hint)
   
   // logs
   console.log(content, content.width, content.height)
