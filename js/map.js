@@ -219,7 +219,7 @@ function create() {
   
   map.id = "popup_map"
   map.setAttribute("class", "center image-fit") // is this needed? (removed image-fit)
-  // map.setAttribute("style", "height: 100%; width: auto;")
+  map.setAttribute("style", "object-fit: scale-down!important;")
   map.src = map_string
   map.addEventListener("mouseenter", function(event) {
     map_hovering = true
