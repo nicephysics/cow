@@ -9,10 +9,24 @@ var boxes = [
     cursor: "pointer",
   }, {
     boxes: [
-      { left: 0, top: 0, right: 1, bottom: 1, },
+      { left: 0.4795321532447272, top: 0.26102655970917316, right: 0.8778809664542215, bottom: 0.5714354816422587, },
     ],
     label: "The Cave",
     link: "../cave",
+    cursor: "pointer",
+  }, {
+    boxes: [
+      { left: 0.87, top: 0.26, right: 0.8778809664542215, bottom: 0.26102655970917316, },
+    ],
+    label: "The Ladder",
+    link: "../ladder",
+    cursor: "pointer",
+  }, {
+    boxes: [
+      { left: 0.40729273116010384, top: 0.2684615039470914, right: 0.4795321532447272, bottom: 0.6829596452110319, },
+    ],
+    label: "The Corn",
+    link: "../corn",
     cursor: "pointer",
   },
 ]
