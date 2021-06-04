@@ -1,3 +1,19 @@
+// "hitboxes"
+var boxes = [
+  {
+    top: 0, left: 0, bottom: 1, right: 1,
+    label: "The Trapdoor",
+    link: "../trapdoor",
+    cursor: "pointer",
+  }, {
+    top: 0, left: 0, bottom: 0, right: 0,
+    label: "The Cave",
+    link: "../cave",
+    cursor: "pointer",
+  },
+]
+
+
 // returns the document number
 function get_page_number() {
   let title = document.title
@@ -71,10 +87,10 @@ function image_click(image, event) {
   let top = bounds.top + window.scrollY
   let x = event.pageX - left
   let y = event.pageY - top
-  let cw = this.clientWidth
-  let ch = this.clientHeight
-  let iw = this.naturalWidth
-  let ih = this.naturalHeight
+  let cw = image.clientWidth
+  let ch = image.clientHeight
+  let iw = image.naturalWidth
+  let ih = image.naturalHeight
   let px = x / cw * iw
   let py = y / ch * ih
   // return a long, long object
@@ -87,6 +103,24 @@ function image_click(image, event) {
     h: ch,
     left: left,
     top: top,
+  }
+}
+
+function map_check(map, map_link, hint, e) {
+  function show_hint() { hint.style.display = "block" }
+  function hide_hint() { hint.style.display = "none" }
+  let done = false
+  for (let box of boxes) {
+    if (e.x > box.left && e.y < box.top && e.x < box.right && e.y < box.bottom) {
+      done = true
+      hint.innerHTML = box.label
+      map_link.href = box.link
+      map_link.style.cursor = box.cursor
+    }
+  }
+  if (!done) {
+    map_link.href = null
+    map_link.style.cursor = "default"
   }
 }
 
@@ -107,6 +141,7 @@ function create() {
   var map_link = document.createElement("a")
   var map = document.createElement("img")
   var text = document.createElement("p")
+  var hint = document.createElement("button")
   
   button.id = "popup_button"
   button.setAttribute("class", "fas fa-map-marked-alt button map-button padding margin-top margin-left large topleft animate-zoom") // styles
@@ -138,7 +173,8 @@ function create() {
   
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center image-fit") // styles
-  map_link.href = map_string
+  // map_link.href = map_string
+  // map_link.style.cursor = "default"
   
   map.id = "popup_map"
   map.setAttribute("class", "center image-fit") // is this needed?
@@ -146,7 +182,13 @@ function create() {
   map.addEventListener("click", function(event) {
     var e = image_click(this, event)
     // check e.x and e.y here!!!
+    map_check(map, map_link, hint, e)
   })
+  
+  hint.id = "popup_hint"
+  hint.setAttribute("class", "button padding medium")
+  hint.innerHTML = ""
+  hint.style.display = "none"
  
   body.appendChild(button)
   body.appendChild(popup)
@@ -156,6 +198,7 @@ function create() {
   content.appendChild(text)
   content.appendChild(map_link)
   map_link.appendChild(map)
+  map_link.appendChild(hint)
   
   // logs
   console.log(content, content.width, content.height)
