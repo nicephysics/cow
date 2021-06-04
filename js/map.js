@@ -123,7 +123,7 @@ function map_hover(map, map_link, hint, e) {
   for (let box of boxes) {
     let hit = false
     for (let b of box.boxes) {
-      if (e.x > b.left && e.y < b.top && e.x < b.right && e.y < b.bottom) {
+      if (e.x > b.left && e.y > b.top && e.x < b.right && e.y < b.bottom) {
         hit = true
       }
     }
