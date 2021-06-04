@@ -141,7 +141,6 @@ function map_hover(map, map_link, hint, e, event) {
     if (event.clientX != null) {
       hint.style.top = `${event.clientY}px`
       hint.style.left = `${event.clientX}px`
-      hint.translateZ(0)
       console.log(hint.style.top, hint.style.left)
     }
     show_hint()
