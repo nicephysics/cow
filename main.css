@@ -130,6 +130,13 @@ body, h1, h2, h3, h4, h5, h6 {
 .map-hint {
   position: fixed!important;
   display: none;
+  z-index: 1001;
+  will-change: left, top;
+  -ms-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Hint container */
