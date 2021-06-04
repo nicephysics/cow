@@ -1,9 +1,15 @@
+// very important function!!! actually just a shortcut
+function two(to_the_power_of) {
+  return Math.pow(2, to_the_power_of)
+}
+
 // "hitboxes"
 var boxes = [
   {
     boxes: [
       { left: 0.8914031, top: 0.4285204, right: 0.9841766, bottom: 0.59548000, },
     ],
+    requirement: two(0),
     label: "The Trapdoor",
     link: "../trapdoor",
     cursor: "pointer",
@@ -11,6 +17,7 @@ var boxes = [
     boxes: [
       { left: 0.4795321532447272, top: 0.26102655970917316, right: 0.8778809664542215, bottom: 0.5714354816422587, },
     ],
+    requirement: two(0),
     label: "The Cave",
     link: "../cave",
     cursor: "pointer",
@@ -18,6 +25,7 @@ var boxes = [
     boxes: [
       { left: 0.87, top: 0.26, right: 0.8778809664542215, bottom: 0.26102655970917316, },
     ],
+    requirement: two(1),
     label: "The Ladder",
     link: "../ladder",
     cursor: "pointer",
@@ -25,6 +33,7 @@ var boxes = [
     boxes: [
       { left: 0.40729273116010384, top: 0.2684615039470914, right: 0.4795321532447272, bottom: 0.6829596452110319, },
     ],
+    requirement: two(2),
     label: "The Corn",
     link: "../corn",
     cursor: "pointer",
@@ -36,31 +45,32 @@ var map_hovering = false
 
 // returns the document number from a title
 function get_page_number_from_title(title) {
+  let base = two(0) + two(1) + two(2) + two(3)
   switch(title) {
     case "The Cave":
-      return 0
+      return two(0)
     case "The Ladder":
-      return 1
+      return two(0) + two(1)
     case "The Corn":
-      return 2
+      return two(0) + two(1) + two(2)
     case "The End":
-      return 3
+      return base
     case "The Stream":
-      return 4
+      return base + two(4)
     case "The Dark Room":
-      return 5
+      return base + two(4) + two(5)
     case "The Maze":
-      return 6
+      return base + two(4) + two(5) + two(6)
     case "The Bright Room":
-      return 7
+      return base + two(4) + two(5) + two(6) + two(7)
     case "The Hole in the Wall":
-      return 8
+      return base + two(8)
     case "The Secret Room":
-      return 9
+      return base + two(8) + two(9)
     case "The Control Room":
-      return 10
+      return base + two(8) + two(9) + two(10)
     default:
-      return -1
+      return 0
   }
 }
 
@@ -82,8 +92,9 @@ function get_number() {
     localStorage.setItem("unlocked_1", 0)
     number = 0
   }
-  let current = Math.pow(2, get_page_number())
-  console.log(current, number)
+  let current = get_page_number()
+  // just a console.log
+  console.log( { page_number: current, current_number: number } )
   if ((number | current) !== number) {
     number = number | current
     localStorage.setItem("unlocked_1", number)
@@ -162,6 +173,7 @@ function map_hover(map, map_link, hint, e, event) {
       let y = event.pageY - rect.height * 2
       hint.style.top = `${y}px`
       hint.style.left = `${x}px`
+      hint.style.display = "block"
       console.log(hint.style.top, hint.style.left)
     }
   } else {
@@ -171,6 +183,7 @@ function map_hover(map, map_link, hint, e, event) {
     */
     map.onclick = function() {}
     map.style.cursor = "default"
+    hint.style.display = "none"
   }
   if (localStorage.getItem("debug_map") === "true") {
     var debug_text = document.getElementById("map_debug_text")
