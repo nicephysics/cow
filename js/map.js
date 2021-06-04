@@ -315,6 +315,17 @@ function create() {
   // end of create function
 }
 
+var intervals = 0
+setInterval(function() {
+  intervals++
+  var map_number = get_number()
+  var hint = document.getElementById("popup_hint")
+  var button = document.getElementById("popup_button")
+  if (map_number > 0) {
+    // todo
+  }
+}, 16)
+
 document.addEventListener("DOMContentLoaded", function() {
   create()
 })
