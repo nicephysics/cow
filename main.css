@@ -133,7 +133,6 @@ body, h1, h2, h3, h4, h5, h6 {
   display: none;
   z-index: 1001;
   will-change: left, top;
-  transition: 0s;
   -ms-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
@@ -145,12 +144,18 @@ body, h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: default; /* not default button behaviour, ironically */
+  white-space: nowrap;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: 0s!important; /* important!!!!!!!!!! */
 }
 
 /* Hint container */
