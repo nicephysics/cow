@@ -119,11 +119,12 @@ function image_position(image, event) {
 function map_hover(map, map_link, hint, e) {
   function show_hint() { hint.style.display = "block" }
   function hide_hint() { hint.style.display = "none" }
-  let done = false
+  var done = false
   for (let box of boxes) {
-    let hit = false
+    var hit = false
     for (let b of box.boxes) {
       if (e.x > b.left && e.y > b.top && e.x < b.right && e.y < b.bottom) {
+        console.log(box.label)
         hit = true
       }
     }
@@ -132,7 +133,7 @@ function map_hover(map, map_link, hint, e) {
       hint.innerHTML = box.label
       map_link.href = box.link
       map_link.style.cursor = box.cursor
-      console.log(box.label)
+      console.log(box.link)
     }
   }
   if (done && map_hovering) {
