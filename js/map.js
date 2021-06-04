@@ -9,7 +9,7 @@ var boxes = [
     cursor: "pointer",
   }, {
     boxes: [
-      { left: 0, top: 0, right: 0, bottom: 0, },
+      { left: 0, top: 0, right: 1, bottom: 1, },
     ],
     label: "The Cave",
     link: "../cave",
@@ -125,6 +125,7 @@ function map_hover(map, map_link, hint, e) {
     for (let b of box.boxes) {
       if (e.x > b.left && e.y > b.top && e.x < b.right && e.y < b.bottom) {
         hit = true
+        break
       }
     }
     if (hit) {
@@ -132,6 +133,7 @@ function map_hover(map, map_link, hint, e) {
       hint.innerHTML = box.label
       map_link.href = box.link
       map_link.style.cursor = box.cursor
+      break
     }
   }
   if (done && map_hovering) {
