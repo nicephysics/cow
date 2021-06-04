@@ -131,8 +131,12 @@ function map_hover(map, map_link, hint, e, event) {
     if (hit) {
       done = true
       hint.innerHTML = box.label
+      /*
       map_link.href = box.link
       map_link.style.cursor = box.cursor
+      */
+      map.onclick = function() { location.href = box.link }
+      map.style.cursor = box.cursor
       break
     }
   }
@@ -147,8 +151,12 @@ function map_hover(map, map_link, hint, e, event) {
       console.log(hint.style.top, hint.style.left)
     }
   } else {
+    /*
     map_link.href = ""
     map_link.style.cursor = "default"
+    */
+    map.onclick = function() {}
+    map.style.cursor = "default"
   }
   if (localStorage.getItem("debug_map") === "true") {
     var debug_text = document.getElementById("map_debug_text")
@@ -170,7 +178,7 @@ function create() {
   var popup = document.createElement("div")
   var content = document.createElement("div")
   var close = document.createElement("span")
-  var map_link = document.createElement("a")
+  // var map_link = document.createElement("a")
   var map = document.createElement("img")
   var text = document.createElement("p")
   var hint = document.createElement("button")
@@ -203,12 +211,14 @@ function create() {
   }
   text.innerHTML = text_string
   
+  /*
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center") // classes (removed image-fit)
   map_link.setAttribute("style", "height: 100%; width: auto;") // styling direct
+  */
   
   map.id = "popup_map"
-  // map.setAttribute("class", "center image-fit") // is this needed?
+  map.setAttribute("class", "center") // is this needed? (removed image-fit)
   map.setAttribute("style", "height: 100%; width: auto;") // styling direct again
   map.src = map_string
   map.addEventListener("mouseenter", function(event) {
@@ -222,7 +232,7 @@ function create() {
   map.addEventListener("mousemove", function(event) {
     var e = image_position(this, event)
     // check e.x and e.y here!!!
-    map_hover(map, map_link, hint, e, event)
+    map_hover(map, null, hint, e, event)
   })
   
   hint.id = "popup_hint"
@@ -244,8 +254,8 @@ function create() {
   popup.appendChild(content)
   content.appendChild(close)
   content.appendChild(text)
-  content.appendChild(map_link)
-  map_link.appendChild(map)
+  content.appendChild(map)
+  // map_link.appendChild(map)
   
   if (localStorage.getItem("debug_map") === "true") {
     var debug_text = document.createElement("p")
@@ -254,10 +264,6 @@ function create() {
     debug_text.innerHTML = ""
     content.appendChild(debug_text)
   }
-  
-  // logs
-  console.log(content, content.width, content.height)
-  console.log(map_link, map.width, map.height)
 
   // When the user clicks on the button, open the modal
   button.onclick = function() {
