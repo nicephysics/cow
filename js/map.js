@@ -221,7 +221,6 @@ function create() {
   
   hint.id = "popup_hint"
   hint.setAttribute("class", "button red padding medium map-hint")
-  hint.setAttribute("style", "z-index: 10; position: fixed; translateZ: 0; will-change: left, top;")
   hint.innerHTML = ""
   hint.style.display = "none"
   hint.addEventListener("mousemove", function(event) {
@@ -232,12 +231,12 @@ function create() {
  
   body.appendChild(button)
   body.appendChild(popup)
+  body.appendChild(hint)
   button.appendChild(map_icon)
   popup.appendChild(content)
   content.appendChild(close)
   content.appendChild(text)
   content.appendChild(map_link)
-  content.appendChild(hint)
   map_link.appendChild(map)
   
   // logs
