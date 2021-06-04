@@ -154,6 +154,10 @@ function map_hover(map, map_link, hint, e, event) {
     map_link.style.cursor = "default"    
     hide_hint()
   }
+  if (localStorage.getItem("debug_map") === "true") {
+    var debug_text = document.getElementById("map_debug_text")
+    debug_text.innerHTML = `${e.x}, ${e.y}`
+  }
 }
 
 function create() {
