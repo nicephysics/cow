@@ -119,8 +119,14 @@ function map_check(map, map_link, hint, e) {
     }
   }
   if (!done) {
+    // no no this is not jquery
+    hint.style.top = `${map.offsetTop + e.py - 25}px`
+    hint.style.left = `${map.offsetLeft + e.px - 25}px`
+    show_hint()
+  } else {
     map_link.href = null
-    map_link.style.cursor = "default"
+    map_link.style.cursor = "default"    
+    hide_hint()
   }
 }
 
