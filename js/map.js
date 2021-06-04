@@ -174,6 +174,7 @@ function map_hover(map, map_link, hint, e, event) {
       hint.style.top = `${y}px`
       hint.style.left = `${x}px`
       hint.style.display = "block"
+      hint.style.webkitAnimationPlayState = "paused";
       console.log(hint.style.top, hint.style.left)
     }
   } else {
