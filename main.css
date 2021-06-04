@@ -127,6 +127,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 
 
+/* for the map hint button */
 .map-hint {
   position: fixed!important;
   display: none;
@@ -138,6 +139,18 @@ body, h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Hint container */
