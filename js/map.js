@@ -95,8 +95,8 @@ function image_position(image, event) {
   let ih = image.naturalHeight
   let px = x / cw * iw
   let py = y / ch * ih
-  // return a long, long object
-  return {
+  // a long, long object
+  let obj = {
     x: px / cw,
     y: py / ch,
     px: px,
@@ -106,6 +106,8 @@ function image_position(image, event) {
     left: left,
     top: top,
   }
+  console.log(obj)
+  return obj
 }
 
 function map_hover(map, map_link, hint, e) {
