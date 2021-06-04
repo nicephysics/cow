@@ -226,11 +226,13 @@ function create() {
   hint.setAttribute("class", "button red padding medium map-hint")
   hint.innerHTML = ""
   hint.style.display = "none"
+  /*
   hint.addEventListener("mousemove", function(event) {
     // same
     var e = image_position(map, event)
     map_hover(map, map_link, hint, e, event)
   })
+  */
  
   body.appendChild(button)
   body.appendChild(popup)
