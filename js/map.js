@@ -244,6 +244,14 @@ function create() {
   content.appendChild(map_link)
   map_link.appendChild(map)
   
+  if (localStorage.getItem("debug_map") === "true") {
+    var debug_text = document.createElement("p")
+    debug_text.id = "map_debug_text"
+    debug_text.setAttribute("class", "center")
+    debug_text.innerHTML = ""
+    content.appendChild(debug_text)
+  }
+  
   // logs
   console.log(content, content.width, content.height)
   console.log(map_link, map.width, map.height)
