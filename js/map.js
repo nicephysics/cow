@@ -1,7 +1,7 @@
 // "hitboxes"
 var boxes = [
   {
-    top: 0, left: 0, bottom: 1, right: 1,
+    top: 0.8914031, left: 0.4285204, bottom: 0.9841766, right: 0.59548000,
     label: "The Trapdoor",
     link: "../trapdoor",
     cursor: "pointer",
