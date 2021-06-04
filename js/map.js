@@ -20,9 +20,8 @@ var boxes = [
 var map_hovering = false
 
 
-// returns the document number
-function get_page_number() {
-  let title = document.title
+// returns the document number from a title
+function get_page_number_from_title(title) {
   switch(title) {
     case "The Cave":
       return 0
@@ -49,6 +48,10 @@ function get_page_number() {
     default:
       return -1
   }
+}
+
+function get_page_number() {
+  return get_page_number_from_title(document.title)
 }
 
 // returns a map link
