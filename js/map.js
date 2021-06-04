@@ -13,6 +13,8 @@ var boxes = [
   },
 ]
 
+var map_hover = false
+
 
 // returns the document number
 function get_page_number() {
@@ -81,7 +83,7 @@ function count_binary(number) {
   return ones
 }
 
-function image_click(image, event) {
+function image_position(image, event) {
   bounds = image.getBoundingClientRect()
   let left = bounds.left + window.scrollX
   let top = bounds.top + window.scrollY
@@ -106,7 +108,7 @@ function image_click(image, event) {
   }
 }
 
-function map_check(map, map_link, hint, e) {
+function map_hover(map, map_link, hint, e) {
   function show_hint() { hint.style.display = "block" }
   function hide_hint() { hint.style.display = "none" }
   let done = false
@@ -118,13 +120,13 @@ function map_check(map, map_link, hint, e) {
       map_link.style.cursor = box.cursor
     }
   }
-  if (!done) {
+  if (done) {
     // no no this is not jquery
     hint.style.top = `${map.offsetTop + e.py - 25}px`
     hint.style.left = `${map.offsetLeft + e.px - 25}px`
     show_hint()
   } else {
-    map_link.href = null
+    map_link.href = "./"
     map_link.style.cursor = "default"    
     hide_hint()
   }
@@ -185,16 +187,27 @@ function create() {
   map.id = "popup_map"
   map.setAttribute("class", "center image-fit") // is this needed?
   map.src = map_string
-  map.addEventListener("click", function(event) {
-    var e = image_click(this, event)
+  map.addEventListener("mouseenter", function(event) {
+    map_hover = true
+  })
+  map.addEventListener("mouseleave", function(event) {
+    map_hover = false
+  })
+  map.addEventListener("mousemove", function(event) {
+    var e = image_position(this, event)
     // check e.x and e.y here!!!
-    map_check(map, map_link, hint, e)
+    map_hover(map, map_link, hint, e)
   })
   
   hint.id = "popup_hint"
   hint.setAttribute("class", "button padding medium")
   hint.innerHTML = ""
   hint.style.display = "none"
+  hint.addEventListener("mousemove", function(event) {
+    // same
+    var e = image_position(map, event)
+    map_hover(map, map_link, hint, e)
+  })
  
   body.appendChild(button)
   body.appendChild(popup)
