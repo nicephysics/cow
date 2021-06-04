@@ -201,7 +201,7 @@ body, h1, h2, h3, h4, h5, h6 {
 .popup {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+  z-index: 101; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
