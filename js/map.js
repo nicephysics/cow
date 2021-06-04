@@ -112,7 +112,7 @@ function image_position(image, event) {
     left: left,
     top: top,
   }
-  console.log(obj)
+  console.log( { x: obj.x, y: obj.y } )
   return obj
 }
 
@@ -132,6 +132,7 @@ function map_hover(map, map_link, hint, e) {
       hint.innerHTML = box.label
       map_link.href = box.link
       map_link.style.cursor = box.cursor
+      console.log(box.label)
     }
   }
   if (done && map_hovering) {
