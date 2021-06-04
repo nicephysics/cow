@@ -116,7 +116,7 @@ function image_position(image, event) {
   return obj
 }
 
-function map_hover(map, map_link, hint, e) {
+function map_hover(map, map_link, hint, e, event) {
   function show_hint() { hint.style.display = "block" }
   function hide_hint() { hint.style.display = "none" }
   var done = false
@@ -138,8 +138,8 @@ function map_hover(map, map_link, hint, e) {
   }
   if (done && map_hovering) {
     // no no this is not jquery
-    hint.style.top = `${map.offsetTop + e.py - 25}px`
-    hint.style.left = `${map.offsetLeft + e.px - 25}px`
+    hint.style.top = `${event.clientX - 25}px`
+    hint.style.left = `${event.clientY - 25}px`
     console.log(hint.style.top, hint.style.left)
     show_hint()
   } else {
@@ -212,7 +212,7 @@ function create() {
   map.addEventListener("mousemove", function(event) {
     var e = image_position(this, event)
     // check e.x and e.y here!!!
-    map_hover(map, map_link, hint, e)
+    map_hover(map, map_link, hint, e, event)
   })
   
   hint.id = "popup_hint"
@@ -223,7 +223,7 @@ function create() {
   hint.addEventListener("mousemove", function(event) {
     // same
     var e = image_position(map, event)
-    map_hover(map, map_link, hint, e)
+    map_hover(map, map_link, hint, e, event)
   })
  
   body.appendChild(button)
