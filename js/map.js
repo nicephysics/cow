@@ -115,7 +115,6 @@ function image_position(image, event) {
     left: left,
     top: top,
   }
-  console.log( { x: obj.x, y: obj.y } )
   return obj
 }
 
@@ -148,7 +147,7 @@ function map_hover(map, map_link, hint, e, event) {
     }
     show_hint()
   } else {
-    map_link.href = "./"
+    map_link.href = ""
     map_link.style.cursor = "default"    
     hide_hint()
   }
