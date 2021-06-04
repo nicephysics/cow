@@ -200,7 +200,7 @@ function create() {
   
   map_link.id = "popup_map_link"
   map_link.setAttribute("class", "center image-fit") // styles
-  map_link.setAttribute("style", "position: relative;") // hee
+  // map_link.setAttribute("style", "position: relative;") // hee
   
   map.id = "popup_map"
   map.setAttribute("class", "center image-fit") // is this needed?
@@ -219,7 +219,7 @@ function create() {
   
   hint.id = "popup_hint"
   hint.setAttribute("class", "button red padding medium map-hint")
-  hint.setAttribute("style", "z-index: 10; position: absolute;")
+  hint.setAttribute("style", "z-index: 10; position: fixed;")
   hint.innerHTML = ""
   hint.style.display = "none"
   hint.addEventListener("mousemove", function(event) {
