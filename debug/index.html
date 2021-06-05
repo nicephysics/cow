@@ -113,7 +113,8 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig)
     
-    var database = firebase.database // yay
+    var database = firebase.database() // yay
+    database.ref("test").set("Hello World!")
   </script>
 
 </html>
