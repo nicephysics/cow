@@ -15,7 +15,7 @@ var boxes = [
     cursor: "pointer",
   }, {
     boxes: [
-      { left: 0.4795321532447272, top: 0.26102655970917316, right: 0.8778809664542215, bottom: 0.5714354816422587, },
+      { left: 0.4795321532447272, top: 0.26102655970917316, right: 0.8778809664542215, bottom: 0.524783615136876, },
     ],
     requirement: two(0),
     label: "The Cave",
@@ -46,6 +46,15 @@ var boxes = [
     requirement: two(3),
     label: "The End",
     link: "../end_itsh",
+    cursor: "pointer",
+  }, {
+    boxes: [
+      { left: 0.4822019867549669, top: 0.524783615136876, right: 0.5558774834437086, bottom: 0.6842039049919485, },
+      { left: 0.5558774834437086, top: 0.524783615136876, right: 0.6221026490066225, bottom: 0.6149607487922706, },
+    ],
+    requirement: two(4),
+    label: "The Stream",
+    link: "../stream",
     cursor: "pointer",
   },
 ]
