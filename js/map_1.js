@@ -44,7 +44,7 @@ var boxes = [
       { left: 0.009519867549668874, top: 0.7869667473919523, right: 0.10802980132450331, bottom: 0.9076820976154993, },
     ],
     requirement: two(3),
-    label: "The End",
+    label: "The End?",
     link: "../end_itsh",
     cursor: "pointer",
   }, {
