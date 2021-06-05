@@ -154,7 +154,11 @@ function image_position(image, event) {
 
 function map_hover(map, map_link, hint, e, event) {
   var done = false
+  var number = get_number()
   for (let box of boxes) {
+    if ( (box.requirement & number) === 0 ) {
+      continue
+    }
     var hit = false
     for (let b of box.boxes) {
       if (e.x > b.left && e.y > b.top && e.x < b.right && e.y < b.bottom) {
