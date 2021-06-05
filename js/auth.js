@@ -9,6 +9,17 @@ function is_logged_in() {
   return (email != "")
 }
 
+function init() {
+  var button = document.getElementById("login_button")
+  if (is_logged_in()) {
+    // user is logged in
+    button.innerHTML = "<i class='fa fa-user-times'></i>  Sign out"
+  } else {
+    // user is logged out
+    button.innerHTML = "<i class='fa fa-user-plus'></i>  Sign in with Google"    
+  }
+}
+
 function login() {
   if (is_logged_in()) {
     // user is logged in
@@ -46,18 +57,9 @@ function login() {
         console.error(error)
       })
   }
+  // init again
+  init()
   // end login function
-}
-
-function init() {
-  var button = document.getElementById("login_button")
-  if (is_logged_in()) {
-    // user is logged in
-    button.innerHTML = "<i class='fa fa-user-times'></i>  Sign out"
-  } else {
-    // user is logged out
-    button.innerHTML = "<i class='fa fa-user-plus'></i>  Sign in with Google"    
-  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
