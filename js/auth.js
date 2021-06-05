@@ -25,6 +25,8 @@ function login() {
     // user is logged in
     firebase.auth().signOut()
     localStorage.setItem("email", "")
+    // init again
+    init()
   } else {
     // user is logged out 
     firebase.auth()
@@ -45,6 +47,8 @@ function login() {
         }
         localStorage.setItem("email", email)
         console.log(email)
+        // init again
+        init()
       }).catch((error) => {
         // Handle errors here...
         var errorCode = error.code
@@ -57,8 +61,6 @@ function login() {
         console.error(error)
       })
   }
-  // init again
-  init()
   // end login function
 }
 
