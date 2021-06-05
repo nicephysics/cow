@@ -68,9 +68,9 @@ body, h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   width: 48px!important;
   height: 48px!important;
-  color:#ff9800!important;
-  background-color:#ff9800!important;
-  text-color:#000000!important;
+  color:#ff9800;
+  background-color:#ff9800;
+  text-color:#000000;
   
   position: fixed!important;
   top: 15px!important;
