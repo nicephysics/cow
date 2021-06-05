@@ -94,12 +94,10 @@ function get_number() {
   }
   let current = get_page_number()
   // just a console.log
-  console.log( { page_number: current, current_number: number } )
   if ((number | current) !== number) {
     number = number | current
     localStorage.setItem("unlocked_1", number)
   }
-  console.log(number)
   return number
 }
 
@@ -336,6 +334,11 @@ setInterval(function() {
   var button = document.getElementById("popup_button")
   if (map_number > 0) {
     // todo
+    if (intervals % 30 === 0) {
+      button.style.color = "#4ede75"
+    } else if (intervals % 15 === 0) {
+      button.style.color = "#ff9800"
+    }
   }
 }, 16)
 
