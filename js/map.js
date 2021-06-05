@@ -115,6 +115,17 @@ function count_binary(number) {
   return ones
 }
 
+function increment_map_visits() {
+  let number = localStorage.getItem("map_visits")
+  if (number != null) {
+    number = parseInt(number) + 1
+  } else {
+    number = 1
+  }
+  localStorage.setItem("map_visits", number)
+  return number
+}
+
 function image_position(image, event) {
   bounds = image.getBoundingClientRect()
   let left = bounds.left + window.scrollX
@@ -297,6 +308,7 @@ function create() {
   button.onclick = function() {
     // popup.style.display = "block"
     popup.classList.add("show")
+    increment_map_visits()
   }
 
   // When the user clicks on <span> (x), close the modal
@@ -308,7 +320,8 @@ function create() {
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == popup) {
-      popup.style.display = "none"
+      // popup.style.display = "none"
+      popup.classList.remove("show")
     }
   }
   
