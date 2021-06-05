@@ -107,10 +107,13 @@
       projectId: "phy-zicz",
       storageBucket: "phy-zicz.appspot.com",
       messagingSenderId: "1082668571233",
-      appId: "1:1082668571233:web:13f4e9c178798f937f2820"
-    };
+      appId: "1:1082668571233:web:13f4e9c178798f937f2820",
+      databaseURL: "https://phy-zicz-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    }
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig)
+    
+    var database = firebase.database // yay
   </script>
 
 </html>
