@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Account
+    </title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/icon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/icon_16.png" sizes="16x16" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- template time -->
+    <link rel="stylesheet" href="https://nicephysics.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- test -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <!-- my template -->
+    <link rel="stylesheet" href="../main.css">
+    <script src="../js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXEP243M4F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZXEP243M4F');
+    </script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="container red center" class="padding-gigantic">
+      <h1 class="margin gigantic">
+        Account
+      </h1>
+    </header>
+    <!-- end of header -->
+
+    <!-- image -->
+    <div class="row-padding padding-64 container center">
+      <div class="content">
+        <i class="fa fa-user-circle gigantic center"></i>
+      </div>
+    </div>
+
+    <!-- grid 1 -->
+    <div class="row-padding light-grey padding-32 container">
+      <div class="content">
+        <h5>
+          Hi!
+          <br>
+          You can create an account or sign in here.
+          <br>
+          Accounts can save your progress! Only Google accounts are supported.
+        </h5>
+      </div>
+    </div>
+
+    <div class="container dark-grey center padding-64">
+      <button onclick="login()" class="button red padding-large margin-top large">
+        Log in with GOOGLY EYES
+      </button>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" class="container padding-64 center opacity">
+      <p>
+        Accounts can be deleted anytime...
+      </p>
+    </footer>
+  
+    <!-- music -->
+    <audio id="music" hidden loop>
+      <source src="../assets/gears.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="music_button" class="fa fa-play button music-circle-button black padding margin-top margin-right large topright animate-zoom" onclick="play()"></button>
+    <script src="../js/music.js"></script>
+    <script>
+      document.getElementById("music").volume = 0.4
+    </script>
+    
+    <!-- end of body -->
+  </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAoL5i8m5s2YDuXvhC7_amfWeuyOXtnSko",
+      authDomain: "phy-zicz.firebaseapp.com",
+      projectId: "phy-zicz",
+      storageBucket: "phy-zicz.appspot.com",
+      messagingSenderId: "1082668571233",
+      appId: "1:1082668571233:web:13f4e9c178798f937f2820",
+      databaseURL: "https://phy-zicz-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+  </script>
+
+  <script src="../debug/auth.js"></script>
+
+</html>
