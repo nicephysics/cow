@@ -9,6 +9,20 @@ function is_logged_in() {
   return (email != "")
 }
 
+function init_text() {
+  var email = localStorage.getItem("email")
+  var button = document.getElementById("login_button")
+  var text = document.getElementById("account_text")
+  
+  if (email == null || email === "") {
+    // user is not signed in
+    text.innerHTML = "Hi!<br>"
+  } else {
+    // user is signed in
+    text.innerHTML = "You are currently signed in as " + email + ".<br>"
+  }
+}
+
 function init() {
   var button = document.getElementById("login_button")
   if (is_logged_in()) {
@@ -18,6 +32,8 @@ function init() {
     // user is logged out
     button.innerHTML = "<i class='fa fa-user-plus'></i>  Sign in with Google"    
   }
+  // call the above function
+  init_text()
 }
 
 function login() {
