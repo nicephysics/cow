@@ -37,6 +37,16 @@ var boxes = [
     label: "The Corn",
     link: "../corn",
     cursor: "pointer",
+  }, {
+    boxes: [
+      { left: 0.3605132450331126, top: 0.5380844821162444, right: 0.4788907284768212, bottom: 0.8316761363636364, },
+      { left: 0.10802980132450331, top: 0.6647610842026825, right: 0.3605132450331126, bottom: 0.8316761363636364, },
+      { left: 0.009519867549668874, top: 0.7869667473919523, right: 0.10802980132450331, bottom: 0.9076820976154993, },
+    ],
+    requirement: two(3),
+    label: "The End",
+    link: "../end_itsh",
+    cursor: "pointer",
   },
 ]
 
