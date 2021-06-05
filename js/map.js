@@ -330,14 +330,18 @@ var intervals = 0
 setInterval(function() {
   intervals++
   var map_number = get_number()
+  var map_visits = localStorage.getItem("map_visits")
   var hint = document.getElementById("popup_hint")
   var button = document.getElementById("popup_button")
-  if (map_number > 0) {
+  // pulsing map button!!!
+  if (map_visits == null || map_visits <= 0) {
     // todo
     if (intervals % 30 === 0) {
       button.style.color = "#4ede75"
+      button.style.backgroundColor = "#4ede75"
     } else if (intervals % 15 === 0) {
       button.style.color = "#ff9800"
+      button.style.backgroundColor = "#ff9800"
     }
   }
 }, 16)
