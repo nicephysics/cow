@@ -16,10 +16,21 @@ function init_text() {
   
   if (email == null || email === "") {
     // user is not signed in
-    text.innerHTML = "Hi!<br>"
+    text.innerHTML =
+`
+Hi!
+<br>
+You can create an account or sign in here.
+<br>
+Accounts can save your progress! Only Google accounts are supported.
+`
   } else {
     // user is signed in
-    text.innerHTML = "You are currently signed in as " + email + ".<br>"
+    text.innerHTML =
+`
+You are currently signed in as ${email}.
+<br>
+`
   }
 }
 
