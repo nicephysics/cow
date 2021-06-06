@@ -105,14 +105,14 @@ function get_map_from_number(number) {
 }
 
 function get_number() {
-  let number = localStorage.getItem("unlocked_1")
+  var number = localStorage.getItem("unlocked_1")
   if (number != null) {
     number = parseInt(number)
   } else {
     localStorage.setItem("unlocked_1", 0)
     number = 0
   }
-  let current = get_page_number()
+  var current = get_page_number()
   // just a console.log
   if ((number | current) !== number) {
     number = number | current
@@ -122,8 +122,8 @@ function get_number() {
 }
 
 function count_binary(number) {
-  let ones = 0
-  let str = number.toString(2)
+  var ones = 0
+  var str = number.toString(2)
   var i = str.length;
   while (i--) {
     if (str.charAt(i) === '1') {
@@ -134,7 +134,7 @@ function count_binary(number) {
 }
 
 function increment_map_visits() {
-  let number = localStorage.getItem("map_visits")
+  var number = localStorage.getItem("map_visits")
   if (number != null) {
     number = parseInt(number) + 1
   } else {
@@ -157,7 +157,7 @@ function image_position(image, event) {
   let px = x / cw * iw
   let py = y / ch * ih
   // a long, long object
-  let obj = {
+  var obj = {
     x: px / iw,
     y: py / ih,
     px: px,
@@ -201,7 +201,7 @@ function map_hover(map, map_link, hint, e, event) {
   if (done) {
     // no no this is not jquery
     if (event.pageX != null) {
-      let rect = hint.getBoundingClientRect()
+      var rect = hint.getBoundingClientRect()
       let x = event.clientX - rect.width / 2
       let y = event.clientY - rect.height * 2
       hint.style.left = `${x}px`
