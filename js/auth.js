@@ -28,7 +28,7 @@ Accounts can save your progress! Only Google accounts are supported.
     // user is signed in
     text.innerHTML =
 `
-You are currently signed in as ${email}.
+You are currently signed in as ${email}@gmail.com!
 <br>
 `
   }
