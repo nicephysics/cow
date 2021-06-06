@@ -10,8 +10,8 @@ function is_logged_in() {
 }
 
 function count_binary(number) {
-  let ones = 0
-  let str = number.toString(2)
+  var ones = 0
+  var str = number.toString(2)
   var i = str.length;
   while (i--) {
     if (str.charAt(i) === '1') {
@@ -37,13 +37,13 @@ function update_div() {
     string += "You have " + items + " items in your inventory.<br>"
   }
   if (one > 0) {
-    string += "You have visited" + one + "pages in the first adventure.<br>"
+    string += "You have visited " + (one+3) + " pages in the first adventure.<br>"
   }
   if (two > 0) {
-    string += "You have visited" + two + "pages in the second adventure.<br>"
+    string += "You have visited " + two + " pages in the second adventure.<br>"
   }
   if (three > 0) {
-    string += "You have visited" + three + "pages in the third adventure.<br>"
+    string += "You have visited " + three + " pages in the third adventure.<br>"
   }
   if (string === "") {
     string = "You have no data in your account."
