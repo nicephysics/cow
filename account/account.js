@@ -9,6 +9,12 @@ function is_logged_in() {
   return (email != "")
 }
 
+function clear_all_data() {
+  localStorage.setItem("unlocked_1", 0)
+  localStorage.setItem("unlocked_2", 0)
+  localStorage.setItem("map_visits", 0)
+}
+
 function count_binary(number) {
   var ones = 0
   var str = number.toString(2)
@@ -98,6 +104,7 @@ function login() {
     // user is logged in
     firebase.auth().signOut()
     localStorage.setItem("email", "")
+    clear_all_data()
     // init again
     init()
   } else {
