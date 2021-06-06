@@ -58,6 +58,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .circle-button-48 {
+  border-radius: 50%!important;
   width: 48px!important;
   height: 48px!important;
 }
