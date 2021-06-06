@@ -10,8 +10,8 @@ var boxes = [
       { left: 0.8969370860927152, top: 0.38790760869565216, right: 0.9780629139072848, bottom: 0.560210346215781, },
     ],
     requirement: two(0),
-    label: "The Trapdoor",
-    link: "../trapdoor",
+    label: "The Rocky Place",
+    link: "../cave",
     cursor: "pointer",
   }, {
     boxes: [
@@ -19,7 +19,7 @@ var boxes = [
     ],
     requirement: two(0),
     label: "The Cave",
-    link: "../cave",
+    link: "../cave/#cave",
     cursor: "pointer",
   }, {
     boxes: [
