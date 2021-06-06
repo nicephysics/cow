@@ -9,10 +9,53 @@ function is_logged_in() {
   return (email != "")
 }
 
+function count_binary(number) {
+  let ones = 0
+  let str = number.toString(2)
+  var i = str.length;
+  while (i--) {
+    if (str.charAt(i) === '1') {
+      ones++
+    }
+  }
+  return ones
+}
+
+function get_pages_from(num) {
+  var number = localStorage.getItem("unlocked_" + num) || 0
+  return count_binary(number)
+}
+
+function update_div() {
+  var data_text = document.getElementById("data_text")
+  var items = 0 // TODO inventory
+  var one = get_pages_from(1)
+  var two = get_pages_from(2)
+  var three = get_pages_from(3)
+  var string = ""
+  if (items > 0) {
+    string += "You have " + items + " items in your inventory.<br>"
+  }
+  if (one > 0) {
+    string += "You have visited" + one + "pages in the first adventure.<br>"
+  }
+  if (two > 0) {
+    string += "You have visited" + two + "pages in the second adventure.<br>"
+  }
+  if (three > 0) {
+    string += "You have visited" + three + "pages in the third adventure.<br>"
+  }
+  if (string === "") {
+    string = "You have no data in your account."
+  }
+  data_text.innerHTML = string
+}
+
 function init_text() {
   var email = localStorage.getItem("email")
   var button = document.getElementById("login_button")
   var text = document.getElementById("account_text")
+  var div = document.getElementById("signed_in")
   
   if (email == null || email === "") {
     // user is not signed in
@@ -24,6 +67,7 @@ You can create an account or sign in here.
 <br>
 Accounts can save your progress! Only Google accounts are supported.
 `
+    div.hidden = true
   } else {
     // user is signed in
     text.innerHTML =
@@ -31,6 +75,8 @@ Accounts can save your progress! Only Google accounts are supported.
 You are currently signed in as ${email}@gmail.com!
 <br>
 `
+    div.hidden = false
+    update_div()
   }
 }
 
