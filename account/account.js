@@ -29,7 +29,7 @@ function count_binary(number) {
 
 function get_pages_from(num) {
   var number = localStorage.getItem("unlocked_" + num) || 0
-  return count_binary(number)
+  return count_binary(parseInt(number))
 }
 
 function update_div() {
