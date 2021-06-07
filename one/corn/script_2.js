@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded",  function() {
-  var div = document.getElementById("stream_div")
+  var button = document.getElementById("stream_button")
   if (localStorage.getItem("unlocked_1") >= 15) {
-    div.hidden = false
+    button.hidden = false
   } else {
-    div.hidden = true    
+    button.hidden = true
   }
 })
