@@ -78,11 +78,11 @@ body, h1, h2, h3, h4, h5, h6 {
   left: 15px!important;
 }
 
-.top-button {
+.corn-top-button {
   cursor: pointer;
   z-index: 100;  
   position: fixed;
-  top: 15px;
+  top: 60px;
   left: 50%;
   -ms-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
