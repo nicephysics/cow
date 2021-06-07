@@ -81,8 +81,14 @@ body, h1, h2, h3, h4, h5, h6 {
 .top-button {
   cursor: pointer;
   z-index: 100;  
-  position: fixed!important;
-  top: 15px!important;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .scroll-to-top {
