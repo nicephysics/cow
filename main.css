@@ -78,6 +78,13 @@ body, h1, h2, h3, h4, h5, h6 {
   left: 15px!important;
 }
 
+.top-button {
+  cursor: pointer;
+  z-index: 100;  
+  position: fixed!important;
+  top: 15px!important;
+}
+
 .scroll-to-top {
   background-color: black;
   border: none;
