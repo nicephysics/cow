@@ -1,5 +1,8 @@
-window.addEventListener("load",  function() {
+document.addEventListener("DOMContentLoaded",  function() {
+  var div = document.getElementById("stream_div")
   if (localStorage.getItem("unlocked_1") >= 15) {
-    location.href = "../stream"
+    div.hidden = false
+  } else {
+    div.hidden = true    
   }
 })
