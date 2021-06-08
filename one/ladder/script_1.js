@@ -111,3 +111,32 @@ function hint5() {
     scroll_to_bottom()
   }
 }
+
+function diagram() {
+  var button = document.getElementById("button_diagram")
+  if (document.getElementById("text_diagram_1") == null) {
+    var p = document.createElement("p")
+    var image = document.createElement("img")
+    var p2 = document.createElement("p")
+    
+    p.classList.add("padding-8")
+    p.id = "text_diagram_1"
+    p.innerHTML = 
+      "Here is a complete diagram of the question... can you solve it?"
+    
+    image.id = "text_image_1"
+    image.setAttribute("class", "center padding-16")
+    image.src = "../../assets/ladder_hint.png"
+    
+    p2.id = "text_diagram_2"
+    p2.classList.add("padding-16")
+    p2.innerHTML =
+      "This image is made using Microsoft Paint. Download the best paint software <a href='../../assets/paint_xp.png'>here</a>!"
+    
+    document.getElementById("footer").appendChild(p)
+    document.getElementById("footer").appendChild(image)
+    document.getElementById("footer").appendChild(p2)
+    
+    scroll_to_bottom()
+  }
+}
