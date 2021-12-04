@@ -245,7 +245,7 @@ body, h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.popup .show {
+.popup.show {
   display: block;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
